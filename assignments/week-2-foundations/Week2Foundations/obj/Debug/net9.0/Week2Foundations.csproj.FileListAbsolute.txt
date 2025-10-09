@@ -1,0 +1,15 @@
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\week-2-foundations\Week2Foundations\obj\Debug\net9.0\Week2Foundations.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\week-2-foundations\Week2Foundations\obj\Debug\net9.0\Week2Foundations.AssemblyInfoInputs.cache
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\week-2-foundations\Week2Foundations\obj\Debug\net9.0\Week2Foundations.AssemblyInfo.cs
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\week-2-foundations\Week2Foundations\obj\Debug\net9.0\Week2Foundations.csproj.CoreCompileInputs.cache
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\week-2-foundations\Week2Foundations\obj\Debug\net9.0\Week2Foundations.sourcelink.json
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\week-2-foundations\Week2Foundations\bin\Debug\net9.0\Week2Foundations.exe
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\week-2-foundations\Week2Foundations\bin\Debug\net9.0\Week2Foundations.deps.json
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\week-2-foundations\Week2Foundations\bin\Debug\net9.0\Week2Foundations.runtimeconfig.json
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\week-2-foundations\Week2Foundations\bin\Debug\net9.0\Week2Foundations.dll
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\week-2-foundations\Week2Foundations\bin\Debug\net9.0\Week2Foundations.pdb
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\week-2-foundations\Week2Foundations\obj\Debug\net9.0\Week2Foundations.dll
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\week-2-foundations\Week2Foundations\obj\Debug\net9.0\refint\Week2Foundations.dll
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\week-2-foundations\Week2Foundations\obj\Debug\net9.0\Week2Foundations.pdb
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\week-2-foundations\Week2Foundations\obj\Debug\net9.0\Week2Foundations.genruntimeconfig.cache
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\week-2-foundations\Week2Foundations\obj\Debug\net9.0\ref\Week2Foundations.dll
