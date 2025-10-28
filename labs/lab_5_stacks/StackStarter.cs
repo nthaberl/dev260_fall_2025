@@ -133,7 +133,7 @@ namespace StackLab
                 actionHistory.Push(action.Trim());
                 // 4. Clear undoHistory stack (new action invalidates redo)
                 undoHistory.Clear(); //clear redo stack 
-                                     // 5. Increment totalOperations
+                // 5. Increment totalOperations
                 totalOperations++;
                 // 6. Show confirmation message
                 WriteLine($"✅ Pushed '{action}' pushed to history\n");
