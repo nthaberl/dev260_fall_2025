@@ -152,16 +152,16 @@ namespace QueueLab
             }
             Console.WriteLine("  6. Enter custom issue");
             Console.WriteLine("  0. Cancel");
-            
+
             Console.Write("\nSelect option (0-6): ");
             string? choice = Console.ReadLine();
-            
+
             if (choice == "0")
             {
                 Console.WriteLine("❌ Ticket submission cancelled.\n");
                 return;
             }
-            
+
             string description = "";
             // int.TryParse() for safe number conversion - better than catching exceptions
             if (int.TryParse(choice, out int index) && index >= 1 && index <= 5)
@@ -223,10 +223,10 @@ namespace QueueLab
             {
                 WriteLine("\n❌No tickets in queue to process.\n");
             }
-            
+
         }
 
-//helper function that provides meaningful info
+        //helper function that provides meaningful info
         static void HandlePeekNext()
         {
             // 1. Display header "View Next Ticket"
@@ -269,80 +269,109 @@ namespace QueueLab
             }
         }
 
-        // TODO Step 6: Handle clearing the queue
         static void HandleClearQueue()
         {
-            // TODO:
-            // 1. Display header "Clear All Tickets"
-            // 2. Check if queue is empty
-            // 3. If empty, show "Queue is already empty. Nothing to clear" and return
-            // 4. If not empty:
-            //    - Save current ticket count before clearing
-            //    - Ask for confirmation: "This will remove X tickets. Are you sure? (y/N):"
-            //    - Read user response and convert to lowercase
-            //    - If response is "y" or "yes":
-            //      - Clear the ticketQueue
-            //      - Increment totalOperations
-            //      - Show success message with count of cleared tickets
-            //    - If response is anything else, show "Clear operation cancelled"
+            WriteLine("\n🗑️ Clear all tickets");
+            if (ticketQueue.Count > 0)
+            {
+                int ticketCount = ticketQueue.Count;
+                Write($"This will remove {ticketCount} tickets. Are you sure? (y/n): ");
+                string? responseConfirmation = ReadLine()?.ToLower();
+
+                if (responseConfirmation == "y" || responseConfirmation == "yes")
+                {
+                    ticketQueue.Clear();
+                    totalOperations++;
+                    WriteLine($"✅ Cleared {ticketCount} tickets from the queue. \n");
+                }
+                else
+                {
+                    WriteLine("❌ Clear operation cancelled. No elements in the queue.\n");
+                }
+            }
         }
 
-        // TODO Step 7: Handle urgent ticket submission (Priority)
         static void HandleUrgentTicket()
         {
             // TODO:
-            // 1. Display header "Submit Urgent Ticket"
-            // 2. Show explanation: "Urgent tickets are processed first!"
-            // 3. Prompt for urgent issue description
-            // 4. Validate description is not empty or whitespace
-            // 5. If empty, show error and return
-            // 6. If valid:
-            //    - Create ticket ID using "U" prefix and ticketCounter (format: "U001", "U002", etc.)
-            //    - Create new SupportTicket with ID, description, "Urgent" priority, and "User"
-            //    - For basic implementation: use regular Enqueue (note: real system would prioritize)
-            //    - Increment ticketCounter and totalOperations
-            //    - Show success message with ticket ID and description
-            //    - Add note explaining that real systems would jump to front of queue
+            WriteLine("\n🚨 Submit Urgent Ticket!");
+            WriteLine("Urgent tickets are processed first! BUT NOT YET!");
+            Write("Enter description for urgent issue: ");
+            string? description = ReadLine()?.Trim();
+            if (string.IsNullOrWhiteSpace(description))
+            {
+                WriteLine("❌ Description cannot be empty. Urgent ticket submission cancelled.\n");
+                return;
+            }
+
+            string ticketId = $"U{ticketCounter:D3}";
+            var urgentTicket = new SupportTicket(ticketId, description!, "Urgent", "User");
+
+            //currently basic implementation
+            //could handle insertion for urgent tickets
+            ticketQueue.Enqueue(urgentTicket);
+            ticketCounter++;
+            totalOperations++;
+
+            WriteLine($"✅ Urgent Ticket ID: {ticketId} submitted successfully!");
+            WriteLine($"Desciption: {description}");
+            WriteLine($" Position in queue: {ticketQueue.Count}\n");
+            WriteLine($"⚠️ Note: In a real system, this would jump to the front of the queue\n");
         }
 
-        // TODO Step 8: Handle searching for tickets
         static void HandleSearchTicket()
         {
-            // TODO:
-            // 1. Display header "Search Tickets"
-            // 2. Check if queue is empty
-            // 3. If empty, show "Queue is empty. No tickets to search" and return
-            // 4. If not empty:
-            //    - Prompt for search term: "Enter ticket ID or description keyword:"
-            //    - Validate search term is not empty or whitespace
-            //    - If empty, show error and return
-            //    - Convert search term to lowercase for case-insensitive search
-            //    - Initialize found flag to false and position counter to 1
-            //    - Display "Search results:" header
-            //    - Loop through queue using foreach:
-            //      - Check if ticket ID or description contains search term (use ToLower())
-            //      - If match found, display position and ticket info, set found flag
-            //      - Increment position counter
-            //    - After loop, if no matches found, show "No tickets found matching '[searchterm]'"
+            WriteLine("👀 Search support tickets");
+
+            if (ticketQueue.Count > 0)
+            {
+                WriteLine("Enter ticket ID or description keyword: ");
+                string? searchTerm = ReadLine()?.Trim();
+                if (string.IsNullOrWhiteSpace(searchTerm))
+                {
+                    WriteLine("❌ Search term cannot be empty. Search cancelled.\n");
+                    return;
+                }
+
+                bool isFound = false;
+                int position = 1;
+                WriteLine("\nSearch Results: ");
+                foreach (var ticket in ticketQueue)
+                {
+                    if (ticket.TicketId.ToLower().Contains(searchTerm.ToLower()) ||
+                    ticket.Description.ToLower().Contains(searchTerm.ToLower()))
+                    {
+                        WriteLine($"📍  {position:D2}. {ticket}");
+                        isFound = true;
+                    }
+                    position++;
+                }
+                if (!isFound)
+                {
+                    WriteLine($"❌ No tickets foundmatching '{searchTerm}'\n");
+                }
+
+                WriteLine();
+            }
         }
 
         static void HandleQueueStatistics()
         {
             Console.WriteLine("\n📊 Queue Statistics");
-            
+
             TimeSpan sessionDuration = DateTime.Now - sessionStart;
-            
+
             Console.WriteLine($"Current Queue Status:");
             Console.WriteLine($"- Tickets in queue: {ticketQueue.Count}");
             Console.WriteLine($"- Total operations: {totalOperations}");
             Console.WriteLine($"- Session duration: {sessionDuration:hh\\:mm\\:ss}");
             Console.WriteLine($"- Next ticket ID: T{ticketCounter:D3}");
-            
+
             if (ticketQueue.Count > 0)
             {
                 var oldestTicket = ticketQueue.Peek();
                 Console.WriteLine($"- Longest waiting: {oldestTicket.TicketId} ({oldestTicket.GetFormattedWaitTime()})");
-                
+
                 // Count by priority
                 int normal = 0, high = 0, urgent = 0;
                 foreach (var ticket in ticketQueue)
@@ -367,14 +396,14 @@ namespace QueueLab
         {
             Console.WriteLine("\n📋 Final Session Summary");
             Console.WriteLine("========================");
-            
+
             TimeSpan sessionDuration = DateTime.Now - sessionStart;
-            
+
             Console.WriteLine($"Session Statistics:");
             Console.WriteLine($"- Duration: {sessionDuration:hh\\:mm\\:ss}");
             Console.WriteLine($"- Total operations: {totalOperations}");
             Console.WriteLine($"- Tickets remaining: {ticketQueue.Count}");
-            
+
             if (ticketQueue.Count > 0)
             {
                 Console.WriteLine($"- Unprocessed tickets:");
@@ -390,7 +419,7 @@ namespace QueueLab
             {
                 Console.WriteLine("✨ All tickets processed - excellent work!");
             }
-            
+
             Console.WriteLine("\nThank you for using the Support Desk Queue System!");
             Console.WriteLine("You've learned FIFO queue operations and real-world ticket management! 🎫\n");
             Console.WriteLine("Press any key to exit...");
