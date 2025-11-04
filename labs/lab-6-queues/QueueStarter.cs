@@ -42,7 +42,6 @@ namespace QueueLab
     /// </summary>
     class Program
     {
-        // TODO Step 1: Set up your data structures and tracking variables - completed
         private static Queue<SupportTicket> ticketQueue = new Queue<SupportTicket>();
         private static int ticketCounter = 1; //for generating unique ticket IDs
         private static int totalOperations = 0; //track total queue operations
@@ -140,7 +139,6 @@ namespace QueueLab
             Console.Write("\nChoose operation (number or name): ");
         }
 
-        // TODO Step 2: Handle submitting new tickets (Enqueue)
         static void HandleSubmitTicket()
         {
             Console.WriteLine("\n📝 Submit New Support Ticket");
@@ -202,15 +200,13 @@ namespace QueueLab
             WriteLine($"Position in queue: {ticketQueue.Count}");
         }
 
-        // TODO Step 3: Handle processing tickets (Dequeue)
+
         static void HandleProcessTicket()
         {
             if (ticketQueue.Count > 0)
             {
                 SupportTicket ticket = ticketQueue.Dequeue();
                 totalOperations++;
-
-                // 1. Display header "Process Next Ticket"
                 WriteLine("\n🔄 Process next ticket");
                 WriteLine(ticket.ToDetailedString());
 
@@ -228,49 +224,49 @@ namespace QueueLab
                 WriteLine("\n❌No tickets in queue to process.\n");
             }
             
-            // 2. Check if ticketQueue has items (guard clause!)
-            // 3. If empty, show "No tickets in queue to process" message
-            // 4. If not empty:
-            //    - Dequeue the next ticket from front of queue
-            //    - Increment totalOperations
-            //    - Display "Processing ticket:" message
-            //    - Show ticket details using ToDetailedString() method
-            //    - Check if queue still has tickets after dequeue
-            //    - If more tickets exist, show next ticket info using Peek()
-            //    - If queue is now empty, show "all tickets processed" message
-
-
         }
 
-        // TODO Step 4: Handle peeking at next ticket
+//helper function that provides meaningful info
         static void HandlePeekNext()
         {
-            // TODO:
             // 1. Display header "View Next Ticket"
+            WriteLine("\n👀 View Next Ticket");
+
             // 2. Check if ticketQueue has items (guard clause!)
+            if (ticketQueue.Count > 0)
+            {
+                SupportTicket nextTicket = ticketQueue.Peek();
+                WriteLine("Next ticket to be processed:");
+                WriteLine(nextTicket.ToDetailedString());
+                WriteLine($"Position: 1 of {ticketQueue.Count}\n");
+            }
             // 3. If empty, show "Queue is empty. No tickets to view" message
-            // 4. If not empty:
-            //    - Use Peek() to look at front ticket without removing it
-            //    - Display "Next ticket to be processed:" message
-            //    - Show ticket details using ToDetailedString() method
-            //    - Show position information (1 of X in queue)
-            // 5. Remember: Peek doesn't modify the queue!
+            else
+            {
+                WriteLine("❌ Queue is empty. No tickets to view. \n");
+            }
         }
 
-        // TODO Step 5: Handle displaying the full queue
         static void HandleDisplayQueue()
         {
-            // TODO:
-            // 1. Display header "Current Support Queue (FIFO Order):"
-            // 2. Check if queue is empty
-            // 3. If empty, show "Queue is empty - no tickets waiting" and return
-            // 4. If not empty:
-            //    - Show total ticket count
-            //    - Use foreach to enumerate through queue (front to back order)
-            //    - Display each ticket with position number (01, 02, 03, etc.)
-            //    - Use ToString() method on each ticket for display
-            //    - Mark the first ticket with "← Next" to show it's next to be processed
-            //    - Increment position counter for each ticket
+            WriteLine("\n📋 Current Support Queue (FIFO Order)");
+
+            if (ticketQueue.Count > 0)
+            {
+                WriteLine($"Total tickets in queue: {ticketQueue.Count}");
+                int position = 1;
+                foreach (var ticket in ticketQueue)
+                {
+                    string nextMarker = position == 1 ? "← Next" : "";
+                    WriteLine($"   {position:D2}. {ticket}{nextMarker}");
+                    position++;
+                }
+                WriteLine();
+            }
+            else
+            {
+                WriteLine("❌Queue is empty - no tickets waiting");
+            }
         }
 
         // TODO Step 6: Handle clearing the queue
