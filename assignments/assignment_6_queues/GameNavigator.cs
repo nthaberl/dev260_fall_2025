@@ -131,7 +131,7 @@ namespace Assignment6
             Console.WriteLine("│ 1. Create Player  │ 2. Join Queue   │ 3. Match   │");
             Console.WriteLine("│ 4. Queue Status   │ 5. Player Stats │ 6. History │");
             Console.WriteLine("│ 7. System Stats   │ 8. Exit         │            │");
-            Console.WriteLine("└───────────────────────────────────────────────────┘");
+            Console.WriteLine("└──────────────────────────────────────────────────┘");
             Console.WriteLine($"Players: {totalPlayers} | Matches: {totalMatches}");
             Console.Write("\nChoose operation (number or name): ");
         }

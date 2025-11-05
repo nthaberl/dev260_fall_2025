@@ -91,23 +91,41 @@ namespace Assignment6
             switch (mode)
             {
                 case GameMode.Casual:
-                    casualQueue.Enqueue(player);
-                    player.JoinQueue();
-                    break;
+                    if (casualQueue.Contains(player))
+                    {
+                        throw new InvalidOperationException($"{player.Username} is already in the casual queue!");
+                    }
+                    else
+                    {
+                        casualQueue.Enqueue(player);
+                        player.JoinQueue();
+                        break;
+                    }
 
                 case GameMode.Ranked:
-                    rankedQueue.Enqueue(player);
-                    player.JoinQueue();
-                    break;
+                    if (rankedQueue.Contains(player))
+                    {
+                        throw new InvalidOperationException($"{player.Username} is already in the ranked queue!");
+                    }
+                    else
+                    {
+                        rankedQueue.Enqueue(player);
+                        player.JoinQueue();
+                        break;
+                    }
 
                 case GameMode.QuickPlay:
-                    quickPlayQueue.Enqueue(player);
-                    player.JoinQueue();
-                    break;
+                    if (quickPlayQueue.Contains(player))
+                    {
+                        throw new InvalidOperationException($"{player.Username} is already in the quickplay queue!");
+                    }
+                    else
+                    {
+                        quickPlayQueue.Enqueue(player);
+                        player.JoinQueue();
+                        break;
+                    }
             }
-            // Hint: Use switch statement on mode to select correct queue
-            // Don't forget to call player.JoinQueue()!
-
         }
 
         /// <summary>
@@ -148,7 +166,7 @@ namespace Assignment6
                         return new Match(player1, player2, mode);
                     }
 
-                //for rankedmatch cannot pull elements from middle of queue
+                //cannot pull elements from middle of queue
                 //easier to copy elements to array first and search for a match
                 case GameMode.Ranked:
                     {
@@ -215,6 +233,7 @@ namespace Assignment6
                         }
                         else
                         {
+                            //storing elements of quickPlayQueue into an array for easier comparison between players
                             Player[] quickPlayArray = quickPlayQueue.ToArray();
 
                             //initialize search indexes
@@ -270,9 +289,6 @@ namespace Assignment6
             }
         }
 
-        /// <summary>
-        /// TODO: Process a match by simulating outcome and updating statistics
-        /// 
         /// Requirements:
         /// - Call match.SimulateOutcome() to determine winner
         /// - Add match to matchHistory
@@ -289,9 +305,6 @@ namespace Assignment6
             WriteLine($"{match.ToDetailedString()}");
         }
 
-        /// <summary>
-        /// TODO: Display current status of all queues with formatting
-        /// 
         /// Requirements:
         /// - Show header "Current Queue Status"
         /// - For each queue (Casual, Ranked, QuickPlay):
@@ -302,18 +315,70 @@ namespace Assignment6
         /// </summary>
         public void DisplayQueueStatus()
         {
+            WriteLine("Current queue status: ");
+
+            if (casualQueue.Count == 0 && rankedQueue.Count == 0 && quickPlayQueue.Count == 0)
+            {
+                WriteLine("All queues are currently empty!\n");
+                return;
+            }
+
+            //display casual queue
             WriteLine("😎 Casual queue status: ");
             if (casualQueue.Count < 1)
             {
-                
+                WriteLine("No players waiting in the casual queue..\n");
             }
-            int position = 1;
-            foreach (var player in casualQueue)
+            else
             {
-                WriteLine($"{position}. {player}");
-                position++;
+                WriteLine($"Current players in casual queue: {casualQueue.Count}");
+                int position = 1;
+                foreach (var player in casualQueue)
+                {
+                    WriteLine($"{position}. {player}");
+                    position++;
+                }
+                WriteLine();
+            }
+
+            //display ranked queue
+            WriteLine("🔥 Ranked queue status: ");
+            if (rankedQueue.Count < 1)
+            {
+                WriteLine("No players waiting in the ranked queue..\n");
+            }
+            else
+            {
+                WriteLine($"Current players in ranked queue: {rankedQueue.Count}");
+                int position = 1;
+                foreach (var player in rankedQueue)
+                {
+                    WriteLine($"{position}. {player}");
+                    position++;
+                }
+                WriteLine();
+            }
+
+            //display quickplayqueue
+            WriteLine("⚡ Quickplay queue status: ");
+            if (quickPlayQueue.Count < 1)
+            {
+                WriteLine("No players waiting in the quickplay queue..\n");
+                return;
+            }
+            else
+            {
+                WriteLine($"Current players in casual queue: {casualQueue.Count}");
+                int position = 1;
+                foreach (var player in casualQueue)
+                {
+                    WriteLine($"{position}. {player}");
+                    position++;
+                }
+                WriteLine();
             }
         }
+
 
         /// <summary>
         /// TODO: Display detailed statistics for a specific player
@@ -326,6 +391,9 @@ namespace Assignment6
         /// </summary>
         public void DisplayPlayerStats(Player player)
         {
+            WriteLine($"{player.ToDetailedString()}");
+
+
             // TODO: Implement this method
             // Hint: Combine player info with match history filtering
             throw new NotImplementedException("DisplayPlayerStats method not yet implemented");
