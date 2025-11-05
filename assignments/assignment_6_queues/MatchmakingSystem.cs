@@ -434,7 +434,7 @@ namespace Assignment6
 
             if (currentQueue == null || currentQueue.Count == 0)
             {
-                return $"😴 {currentQueue} has a long wait..";
+                return $" 😴 There has a long wait..\n";
             }
 
             switch (mode)
@@ -444,11 +444,11 @@ namespace Assignment6
                     {
                         if (currentQueue.Count > 1)
                         {
-                            return $"🏃 {currentQueue} has no wait!";
+                            return $" 🏃 There's no wait!\n";
                         }
                         else
                         {
-                            return $"⌚ {currentQueue} has a short wait";
+                            return $" 🤏 There is a short wait.\n";
                         }
                     }
                 //because quickplay follows FIFO with 4 people, no wait if there are 4 people
@@ -457,7 +457,7 @@ namespace Assignment6
                     {
                         if (currentQueue.Count > 3)
                         {
-                            return $"🏃 {currentQueue} has no wait!";
+                            return $" 🏃 There's no wait!\n";
                         }
                         else
                         {
@@ -477,11 +477,11 @@ namespace Assignment6
 
                             if (foundMatch)
                             {
-                                return $"🏃 {currentQueue} has no wait!";
+                                return $" 🏃 There's no wait!\n";
                             }
                             else
                             {
-                                return $"⌚ {currentQueue} has a short wait";
+                                return $" 🤏 There is a short wait.\n";
                             }
                         }
                     }
@@ -507,18 +507,17 @@ namespace Assignment6
 
                             if (foundMatch)
                             {
-                                return $"🏃 {currentQueue} has no wait!";
+                                return $" 🏃 There's no wait!\n";
                             }
                             else
                             {
-                                return $"⌚ {currentQueue} has a short wait";
+                                return $" 🤏 There is a short wait.\n";
                             }
                         }
                         else
                         {
-                            return $"⌚ {currentQueue} has a short wait";
+                            return $" 🤏 There is a short wait.\n";
                         }
-                        break;
                     }
 
                 default:
