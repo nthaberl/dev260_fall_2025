@@ -11,11 +11,12 @@
 
 **Biggest challenge faced:**
 [Describe the most difficult part of the assignment - was it the skill-based matching, queue management, or match processing?]
-Queue wait time, didn't realize I needed to return a string
+implementing ranked matching was biggest challenge
 
 
 **How you solved it:**
 [Explain your solution approach and what helped you figure it out]
+decided to store it into an array
 
 **Most confusing concept:**
 [What was hardest to understand about queues, matchmaking algorithms, or game mode differences?]
