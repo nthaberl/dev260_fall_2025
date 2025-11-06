@@ -78,11 +78,12 @@ namespace Assignment6
         // STUDENT IMPLEMENTATION METHODS (TO DO)
         // ============================================
 
-        //using switch add player to correct queue
+        //using switch to add player to correct queue
         //validating that they are not already in the queue
         //if so, throw an exception
-        //can not simply display an error message, as GameNavigator will display that player was successfully added
-        //even if they weren't, so an exception is needed
+        //can not simply display an error message
+        //GameNavigator will display that player was successfully added even if they weren't
+        //so an exception is needed
         //otherwise player is added to queue
         public void AddToQueue(Player player, GameMode mode)
         {
@@ -131,7 +132,7 @@ namespace Assignment6
 
         public Match? TryCreateMatch(GameMode mode)
         {
-            //using helper function to get queuemode
+            //using helper function to get current queue
             var currentQueue = GetQueueByMode(mode);
 
             //returns null if any queue has less than 2 players
