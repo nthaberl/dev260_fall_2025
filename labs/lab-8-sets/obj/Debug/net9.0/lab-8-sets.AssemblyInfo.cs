@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("lab-8-sets")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3db0bf7b83fce4b33e2b5ae72c2b956e15c71aab")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a1ca3d7fb87ecce5b3dd8fee7b38d5eba47bfc40")]
 [assembly: System.Reflection.AssemblyProductAttribute("lab-8-sets")]
 [assembly: System.Reflection.AssemblyTitleAttribute("lab-8-sets")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

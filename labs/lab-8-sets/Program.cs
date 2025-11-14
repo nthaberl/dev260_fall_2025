@@ -229,7 +229,6 @@ namespace Lab8_Sets
         /// </summary>
         public HashSet<string> GetMissingPermissions(string userId, HashSet<string> requiredPermissions)
         {
-            // TODO: Implement this method
             // Hint: Use ExceptWith() to find permissions in required but not in user's set
             // Return new HashSet with missing permissions
             totalOperations++;
@@ -275,7 +274,6 @@ namespace Lab8_Sets
             //one-liner approach
             //return enrolledNow.Except(enrolledLastQuarter).ToHashSet();
 
-            // TODO: Implement this method
             // Hint: Create copy of enrolledNow, then use ExceptWith(enrolledLastQuarter)
 
             // throw new NotImplementedException("FindNewStudents method needs implementation");
@@ -301,7 +299,7 @@ namespace Lab8_Sets
             droppedStudents.ExceptWith(enrolledNow);
 
             return droppedStudents;
-            // TODO: Implement this method
+
             // Hint: Create copy of enrolledLastQuarter, then use ExceptWith(enrolledNow)
 
             // throw new NotImplementedException("FindDroppedStudents method needs implementation");
@@ -323,10 +321,14 @@ namespace Lab8_Sets
         {
             totalOperations++;
 
-            // TODO: Implement this method
-            // Hint: Create copy of enrolledNow, then use IntersectWith(enrolledLastQuarter)
 
-            throw new NotImplementedException("FindContinuingStudents method needs implementation");
+            // Hint: Create copy of enrolledNow, then use IntersectWith(enrolledLastQuarter) -- who was here before and who is still here
+            var continuingStudents = new HashSet<string>(enrolledNow);
+            continuingStudents.IntersectWith(enrolledLastQuarter);
+
+            return continuingStudents;
+
+            // throw new NotImplementedException("FindContinuingStudents method needs implementation");
         }
 
         /// <summary>
@@ -346,11 +348,19 @@ namespace Lab8_Sets
         {
             totalOperations++;
 
-            // TODO: Implement this method
             // Hint: Use FindContinuingStudents() method you implemented
             // Calculate: (continuing count / last quarter count) * 100
 
-            throw new NotImplementedException("CalculateRetentionRate method needs implementation");
+            if (enrolledLastQuarter.Count == 0)
+            {
+                return 0.0;
+            }
+
+            var continuingStudents = FindContinuingStudents();
+            double retentionRate = ((double)continuingStudents.Count / enrolledLastQuarter.Count) * 100.0;
+
+            return retentionRate;
+            // throw new NotImplementedException("CalculateRetentionRate method needs implementation");
         }
 
         public void RunInteractiveMenu()
