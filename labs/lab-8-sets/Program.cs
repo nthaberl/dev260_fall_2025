@@ -189,6 +189,8 @@ namespace Lab8_Sets
         /// </summary>
         public int AddPermissions(string userId, HashSet<string> newPermissions)
         {
+            //ALL USERS INITIALLY HAVE READ AND WRITE
+
             // Hint: Get current permission count, use UnionWith(), compare counts
             // Create new HashSet for user if they don't exist
             totalOperations++;
@@ -227,13 +229,26 @@ namespace Lab8_Sets
         /// </summary>
         public HashSet<string> GetMissingPermissions(string userId, HashSet<string> requiredPermissions)
         {
-            totalOperations++;
-
             // TODO: Implement this method
             // Hint: Use ExceptWith() to find permissions in required but not in user's set
             // Return new HashSet with missing permissions
+            totalOperations++;
 
-            throw new NotImplementedException("GetMissingPermissions method needs implementation");
+            //defensive programming!
+            //if user not found, return new hashset
+            if (!userPermissions.ContainsKey(userId))
+            {
+                return new HashSet<string>(requiredPermissions);
+            }
+
+            var missingPermissions = new HashSet<string>(requiredPermissions);
+
+            //just the remaining permissions are added
+            missingPermissions.ExceptWith(userPermissions[userId]);
+
+            return missingPermissions;
+
+            //throw new NotImplementedException("GetMissingPermissions method needs implementation");
         }
 
         /// <summary>
@@ -252,10 +267,18 @@ namespace Lab8_Sets
         {
             totalOperations++;
 
+            var newStudents = new HashSet<string>(enrolledNow);
+            newStudents.ExceptWith(enrolledLastQuarter);
+
+            return newStudents;
+
+            //one-liner approach
+            //return enrolledNow.Except(enrolledLastQuarter).ToHashSet();
+
             // TODO: Implement this method
             // Hint: Create copy of enrolledNow, then use ExceptWith(enrolledLastQuarter)
 
-            throw new NotImplementedException("FindNewStudents method needs implementation");
+            // throw new NotImplementedException("FindNewStudents method needs implementation");
         }
 
         /// <summary>
@@ -274,10 +297,14 @@ namespace Lab8_Sets
         {
             totalOperations++;
 
+            var droppedStudents = new HashSet<string>(enrolledLastQuarter);
+            droppedStudents.ExceptWith(enrolledNow);
+
+            return droppedStudents;
             // TODO: Implement this method
             // Hint: Create copy of enrolledLastQuarter, then use ExceptWith(enrolledNow)
 
-            throw new NotImplementedException("FindDroppedStudents method needs implementation");
+            // throw new NotImplementedException("FindDroppedStudents method needs implementation");
         }
 
         /// <summary>
