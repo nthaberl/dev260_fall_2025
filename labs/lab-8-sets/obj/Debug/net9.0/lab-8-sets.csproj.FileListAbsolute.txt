@@ -1,0 +1,15 @@
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\lab-8-sets\bin\Debug\net9.0\lab-8-sets.exe
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\lab-8-sets\bin\Debug\net9.0\lab-8-sets.deps.json
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\lab-8-sets\bin\Debug\net9.0\lab-8-sets.runtimeconfig.json
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\lab-8-sets\bin\Debug\net9.0\lab-8-sets.dll
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\lab-8-sets\bin\Debug\net9.0\lab-8-sets.pdb
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\lab-8-sets\obj\Debug\net9.0\lab-8-sets.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\lab-8-sets\obj\Debug\net9.0\lab-8-sets.AssemblyInfoInputs.cache
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\lab-8-sets\obj\Debug\net9.0\lab-8-sets.AssemblyInfo.cs
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\lab-8-sets\obj\Debug\net9.0\lab-8-sets.csproj.CoreCompileInputs.cache
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\lab-8-sets\obj\Debug\net9.0\lab-8-sets.sourcelink.json
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\lab-8-sets\obj\Debug\net9.0\lab-8-sets.dll
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\lab-8-sets\obj\Debug\net9.0\refint\lab-8-sets.dll
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\lab-8-sets\obj\Debug\net9.0\lab-8-sets.pdb
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\lab-8-sets\obj\Debug\net9.0\lab-8-sets.genruntimeconfig.cache
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\lab-8-sets\obj\Debug\net9.0\ref\lab-8-sets.dll
