@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using static System.Console;
 
 namespace Assignment8
 {
@@ -15,14 +16,14 @@ namespace Assignment8
     {
         // Core HashSet for dictionary storage - provides O(1) word lookups
         private HashSet<string> dictionary;
-        
+
         // Text analysis results - populated after analyzing a file
         private List<string> allWordsInText;
         private HashSet<string> uniqueWordsInText;
         private HashSet<string> correctlySpelledWords;
         private HashSet<string> misspelledWords;
         private string currentFileName;
-        
+
         public SpellChecker()
         {
             dictionary = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
@@ -32,22 +33,22 @@ namespace Assignment8
             misspelledWords = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
             currentFileName = "";
         }
-        
+
         /// <summary>
         /// Gets the number of words in the loaded dictionary.
         /// </summary>
         public int DictionarySize => dictionary.Count;
-        
+
         /// <summary>
         /// Gets whether a text file has been analyzed.
         /// </summary>
         public bool HasAnalyzedText => !string.IsNullOrEmpty(currentFileName);
-        
+
         /// <summary>
         /// Gets the name of the currently analyzed file.
         /// </summary>
         public string CurrentFileName => currentFileName;
-        
+
         /// <summary>
         /// Gets basic statistics about the analyzed text.
         /// </summary>
@@ -60,10 +61,8 @@ namespace Assignment8
                 misspelledWords.Count
             );
         }
-        
+
         /// <summary>
-        /// TODO #1: Load Dictionary into HashSet
-        /// 
         /// Load words from the specified file into the dictionary HashSet.
         /// Requirements:
         /// - Read all lines from the file
@@ -79,17 +78,32 @@ namespace Assignment8
         /// </summary>
         public bool LoadDictionary(string filename)
         {
-            // TODO: Implement dictionary loading
-            // Hint: Use File.ReadAllLines() and handle FileNotFoundException
-            // Hint: Use string.Trim() and string.ToLowerInvariant() for normalization
-            // Hint: dictionary.Add() will automatically handle duplicates
-            
-            throw new NotImplementedException("LoadDictionary method not yet implemented");
+            try
+            {
+                //create array of strings and use ReadAllLines to load each word into the array
+                string[] dictionaryWords = File.ReadAllLines(filename);
+
+                foreach (string word in dictionaryWords)
+                {
+
+                    //iterating through array and normalizing each word with .Trim() and .ToLowerInvariant()
+                    string normalizedWord = word.Trim().ToLowerInvariant();
+
+                    //dictionary.Add() will automatically handle duplicates
+                    //adding each word to dictionary HashSet after normalization
+                    dictionary.Add(normalizedWord);
+                }
+
+                return true;
+            }
+            catch (FileNotFoundException)
+            {
+                WriteLine("❌ File not found");
+                return false;
+            }
         }
-        
+
         /// <summary>
-        /// TODO #2: Analyze Text File
-        /// 
         /// Load and analyze a text file, populating all internal collections.
         /// Requirements:
         /// - Read the entire file content
@@ -105,20 +119,53 @@ namespace Assignment8
         /// - HashSet<T> for automatic uniqueness
         /// - Regex for advanced text processing (stretch goal)
         /// </summary>
-        public bool AnalyzeTextFile(string filename)
+        public bool AnalyzeTextFile(string fileName)
         {
-            // TODO: Implement text file analysis
             // Hint: Use File.ReadAllText() to read entire file
             // Hint: Split on char[] { ' ', '\t', '\n', '\r' } for simple tokenization
             // Hint: Use Regex.Replace to remove punctuation: @"[^\w\s]" -> ""
             // Hint: Filter out empty strings after processing
-            
-            throw new NotImplementedException("AnalyzeTextFile method not yet implemented");
+            try
+            {
+                //clearing the list/hashset so only one text file is analyzed at a time
+                allWordsInText.Clear();
+                uniqueWordsInText.Clear();
+
+                //HasAnalyzedText is using 'currentFileName', not 'fileName', ran into issues while testing
+                currentFileName = fileName;
+
+                //all text is stored into a string
+                string textBlock = File.ReadAllText(currentFileName);
+
+                //array of separators
+                char[] separators = new char[] { ' ', '\t', '\n', '\r' };
+
+                //splitting words based on established separators
+                string[] words = textBlock.Split(separators);
+
+                foreach (string word in words)
+                {
+                    //normalizing words with regex, trim(), and toLowerInvariant()
+                    string simplifiedWord = Regex.Replace(word.Trim().ToLowerInvariant(), @"[^\w\s]", "");
+
+                    //only storing words in list if it is not null/empty
+                    if (!string.IsNullOrEmpty(simplifiedWord))
+                    {
+                        allWordsInText.Add(simplifiedWord);
+                        uniqueWordsInText.Add(simplifiedWord);
+                    }
+                }
+
+                return true;
+            }
+            catch (FileNotFoundException)
+            {
+                WriteLine("❌ File not found");
+                return false;
+            }
         }
-        
+
         /// <summary>
-        /// TODO #3: Categorize Words by Spelling
-        /// 
         /// After analyzing text, categorize unique words into correct and misspelled.
         /// Requirements:
         /// - Iterate through uniqueWordsInText
@@ -133,17 +180,26 @@ namespace Assignment8
         /// </summary>
         public void CategorizeWords()
         {
-            // TODO: Implement word categorization
-            // Hint: Clear both correctlySpelledWords and misspelledWords first
-            // Hint: Use a foreach loop over uniqueWordsInText
-            // Hint: Use dictionary.Contains(word) for fast lookup
-            
-            throw new NotImplementedException("CategorizeWords method not yet implemented");
+            correctlySpelledWords.Clear();
+            misspelledWords.Clear();
+
+
+            foreach (string word in uniqueWordsInText)
+            {
+                //if the word is in the dictionary, it is spelled correctly
+                if (dictionary.Contains(word))
+                {
+                    correctlySpelledWords.Add(word);
+                }
+                else
+                {
+                    //it not in the dictionary, it is misspelled
+                    misspelledWords.Add(word);
+                }
+            }
         }
-        
+
         /// <summary>
-        /// TODO #4: Check Individual Word
-        /// 
         /// Check if a specific word is in the dictionary and/or appears in analyzed text.
         /// Requirements:
         /// - Normalize the input word consistently
@@ -159,17 +215,21 @@ namespace Assignment8
         /// </summary>
         public (bool inDictionary, bool inText, int occurrences) CheckWord(string word)
         {
-            // TODO: Implement individual word checking
             // Hint: Normalize the word using the same method as other operations
             // Hint: Use dictionary.Contains() and uniqueWordsInText.Contains()
             // Hint: Use allWordsInText.Count(w => w.Equals(normalizedWord, StringComparison.OrdinalIgnoreCase))
-            
-            throw new NotImplementedException("CheckWord method not yet implemented");
+
+            //normalizing word before checking if it is in any list or set
+            string normalizedWord = Regex.Replace(word.Trim().ToLowerInvariant(), @"[^\w\s]", "");
+
+            bool inDictionary = dictionary.Contains(normalizedWord);
+            bool inText = uniqueWordsInText.Contains(normalizedWord);
+            int occurrences = allWordsInText.Count(w => w.Equals(normalizedWord, StringComparison.OrdinalIgnoreCase));
+
+            return (inDictionary, inText, occurrences);
         }
-        
+
         /// <summary>
-        /// TODO #5: Get Misspelled Words
-        /// 
         /// Return a sorted list of all misspelled words from the analyzed text.
         /// Requirements:
         /// - Return words from misspelledWords HashSet
@@ -184,17 +244,23 @@ namespace Assignment8
         /// </summary>
         public List<string> GetMisspelledWords(int maxResults = 50)
         {
-            // TODO: Implement misspelled words retrieval
             // Hint: Convert misspelledWords to List, then use OrderBy()
             // Hint: Use Take(maxResults) to limit results if needed
             // Hint: Return empty list if no text has been analyzed
-            
-            throw new NotImplementedException("GetMisspelledWords method not yet implemented");
+
+            //if text has not been analyzed, return an empty set 
+            if (!HasAnalyzedText)
+            {
+                return new List<string>();
+            }
+
+            //misspelledWords is being ordered, then only the maxResults are being stored in a list and returned
+            List<string> topSortedMisspelledList = misspelledWords.OrderBy(word => word).Take(maxResults).ToList();
+
+            return topSortedMisspelledList;
         }
-        
+
         /// <summary>
-        /// TODO #6: Get Unique Words Sample
-        /// 
         /// Return a sample of unique words found in the analyzed text.
         /// Requirements:
         /// - Return words from uniqueWordsInText HashSet
@@ -209,19 +275,25 @@ namespace Assignment8
         /// </summary>
         public List<string> GetUniqueWordsSample(int maxResults = 20)
         {
-            // TODO: Implement unique words sample retrieval
-            // Hint: Similar to GetMisspelledWords but use uniqueWordsInText
-            // Hint: Consider showing a mix of correct and misspelled words
             
-            throw new NotImplementedException("GetUniqueWordsSample method not yet implemented");
+            if (!HasAnalyzedText)
+            {
+                return new List<string>();
+            }
+
+            //unique words does not store categorized words, so a mixture of correct and misspelled words will be returned
+            //similar implementation as GetMisspelledWords()
+            List<string> topUniqueWordList = uniqueWordsInText.OrderBy(word => word).Take(maxResults).ToList();
+
+            return topUniqueWordList;
         }
-        
+
         // Helper method for consistent word normalization
         private string NormalizeWord(string word)
         {
             if (string.IsNullOrWhiteSpace(word))
                 return "";
-                
+
             // Remove punctuation and convert to lowercase
             word = Regex.Replace(word.Trim(), @"[^\w]", "");
             return word.ToLowerInvariant();
