@@ -104,8 +104,6 @@ namespace Lab8_Sets
         // ============================================
 
         /// <summary>
-        /// TODO #1: Deduplicate an email list
-        /// 
         /// Real-World Connection: This is like cleaning a mailing list or user database
         /// 
         /// Requirements:
@@ -118,7 +116,6 @@ namespace Lab8_Sets
         /// </summary>
         public int DeduplicateEmails(List<string> emailList)
         {
-            // TODO: Implement this method
             // Hint: Create HashSet with StringComparer.OrdinalIgnoreCase
             // Compare original count with HashSet count to find duplicates removed
 
@@ -137,14 +134,9 @@ namespace Lab8_Sets
             int dupsRemoved = originalCount - emailList.Count;
 
             return dupsRemoved;
-
-
-            //throw new NotImplementedException("DeduplicateEmails method needs implementation");
         }
 
         /// <summary>
-        /// TODO #2: Check if user has specific permission
-        /// 
         /// Real-World Connection: This is like checking if a user can access a feature
         /// 
         /// Requirements:
@@ -157,7 +149,6 @@ namespace Lab8_Sets
         /// </summary>
         public bool HasPermission(string userId, string permission)
         {
-            // TODO: Implement this method
             // Hint: Check if user exists in userPermissions dictionary first
             // Then use Contains() on their permission set
             totalOperations++;
@@ -169,14 +160,9 @@ namespace Lab8_Sets
             }
 
             return userPermissions[userId].Contains(permission);
-
-
-            // throw new NotImplementedException("HasPermission method needs implementation");
         }
 
         /// <summary>
-        /// TODO #3: Add permissions to a user
-        /// 
         /// Real-World Connection: This is like granting new permissions to a user role
         /// 
         /// Requirements:
@@ -210,13 +196,9 @@ namespace Lab8_Sets
             int newCount = userPermissions[userId].Count;
 
             return newCount - currentCount;
-
-            // throw new NotImplementedException("AddPermissions method needs implementation");
         }
 
         /// <summary>
-        /// TODO #4: Check if user has all required permissions
-        /// 
         /// Real-World Connection: This is like validating access to a secure feature
         /// 
         /// Requirements:
@@ -229,8 +211,6 @@ namespace Lab8_Sets
         /// </summary>
         public HashSet<string> GetMissingPermissions(string userId, HashSet<string> requiredPermissions)
         {
-            // Hint: Use ExceptWith() to find permissions in required but not in user's set
-            // Return new HashSet with missing permissions
             totalOperations++;
 
             //defensive programming!
@@ -242,17 +222,15 @@ namespace Lab8_Sets
 
             var missingPermissions = new HashSet<string>(requiredPermissions);
 
+            // Hint: Use ExceptWith() to find permissions in required but not in user's set
             //just the remaining permissions are added
             missingPermissions.ExceptWith(userPermissions[userId]);
 
+            // Return new HashSet with missing permissions
             return missingPermissions;
-
-            //throw new NotImplementedException("GetMissingPermissions method needs implementation");
         }
 
         /// <summary>
-        /// TODO #5: Find new students (enrolled now but not last quarter)
-        /// 
         /// Real-World Connection: This is like finding new sign-ups between time periods
         /// 
         /// Requirements:
@@ -266,6 +244,7 @@ namespace Lab8_Sets
         {
             totalOperations++;
 
+            // Hint: Create copy of enrolledNow, then use ExceptWith(enrolledLastQuarter)
             var newStudents = new HashSet<string>(enrolledNow);
             newStudents.ExceptWith(enrolledLastQuarter);
 
@@ -273,15 +252,9 @@ namespace Lab8_Sets
 
             //one-liner approach
             //return enrolledNow.Except(enrolledLastQuarter).ToHashSet();
-
-            // Hint: Create copy of enrolledNow, then use ExceptWith(enrolledLastQuarter)
-
-            // throw new NotImplementedException("FindNewStudents method needs implementation");
         }
 
         /// <summary>
-        /// TODO #6: Find dropped students (enrolled last quarter but not now)
-        /// 
         /// Real-World Connection: This is like finding users who cancelled subscriptions
         /// 
         /// Requirements:
@@ -295,19 +268,14 @@ namespace Lab8_Sets
         {
             totalOperations++;
 
+            // Hint: Create copy of enrolledLastQuarter, then use ExceptWith(enrolledNow)
             var droppedStudents = new HashSet<string>(enrolledLastQuarter);
             droppedStudents.ExceptWith(enrolledNow);
 
             return droppedStudents;
-
-            // Hint: Create copy of enrolledLastQuarter, then use ExceptWith(enrolledNow)
-
-            // throw new NotImplementedException("FindDroppedStudents method needs implementation");
         }
 
         /// <summary>
-        /// TODO #7: Find continuing students (enrolled both quarters)
-        /// 
         /// Real-World Connection: This is like finding loyal customers or active users
         /// 
         /// Requirements:
@@ -327,13 +295,9 @@ namespace Lab8_Sets
             continuingStudents.IntersectWith(enrolledLastQuarter);
 
             return continuingStudents;
-
-            // throw new NotImplementedException("FindContinuingStudents method needs implementation");
         }
 
         /// <summary>
-        /// TODO #8: Calculate retention rate
-        /// 
         /// Real-World Connection: This is like calculating customer retention in analytics
         /// 
         /// Requirements:
@@ -348,19 +312,17 @@ namespace Lab8_Sets
         {
             totalOperations++;
 
-            // Hint: Use FindContinuingStudents() method you implemented
-            // Calculate: (continuing count / last quarter count) * 100
-
             if (enrolledLastQuarter.Count == 0)
             {
                 return 0.0;
             }
 
+            // Hint: Use FindContinuingStudents() method you implemented
+            // Calculate: (continuing count / last quarter count) * 100
             var continuingStudents = FindContinuingStudents();
             double retentionRate = ((double)continuingStudents.Count / enrolledLastQuarter.Count) * 100.0;
 
             return retentionRate;
-            // throw new NotImplementedException("CalculateRetentionRate method needs implementation");
         }
 
         public void RunInteractiveMenu()
