@@ -143,8 +143,6 @@ namespace Lab9_BST
         }
 
         /// <summary>
-        /// TODO #4: Find employee with minimum ID (leftmost node)
-        /// 
         /// Real-World Connection: This is like finding the newest hire or lowest badge number
         /// 
         /// Requirements:
@@ -159,15 +157,21 @@ namespace Lab9_BST
         {
             totalOperations++;
 
-            // TODO: Implement this method
+            if (root == null)
+            {
+                return null; //empty tree case
+            }
             // Hint: Keep going left until you can't go anymore
+            TreeNode current = root;
+            while (current.Left != null)
+            {
+                current = current.Left;
+            }
 
-            throw new NotImplementedException("FindMinimum method needs implementation");
+            return current.Employee;
         }
 
         /// <summary>
-        /// TODO #5: Find employee with maximum ID (rightmost node)
-        /// 
         /// Real-World Connection: This is like finding the most senior employee or highest badge number
         /// 
         /// Requirements:
@@ -182,10 +186,18 @@ namespace Lab9_BST
         {
             totalOperations++;
 
-            // TODO: Implement this method
-            // Hint: Keep going right until you can't go anymore
+            if (root == null)
+            {
+                return null; //empty tree case
+            }
 
-            throw new NotImplementedException("FindMaximum method needs implementation");
+            TreeNode current = root;
+            while (current.Right != null)
+            {
+                current = current.Right;
+            }
+
+            return current.Employee;
         }
 
         /// <summary>
