@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BinarySearchTreeLab")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8faa3bef86db67c1593557490bac3aca37bb1969")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+572927f2ed23cace0995bf44ef93355918c1af82")]
 [assembly: System.Reflection.AssemblyProductAttribute("BinarySearchTreeLab")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BinarySearchTreeLab")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
