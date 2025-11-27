@@ -161,7 +161,7 @@ namespace Lab9_BST
             {
                 return null; //empty tree case
             }
-            // Hint: Keep going left until you can't go anymore
+            //Keep going left until you can't go anymore
             TreeNode current = root;
             while (current.Left != null)
             {
@@ -191,6 +191,7 @@ namespace Lab9_BST
                 return null; //empty tree case
             }
 
+            //keep traversing left until you can't go anymore
             TreeNode current = root;
             while (current.Right != null)
             {
@@ -224,11 +225,9 @@ namespace Lab9_BST
 
         private TreeNode? InsertRecursive(TreeNode? node, Employee employee)
         {
-            // TODO: Implement recursive insertion logic
-            // Base case: if node is null, create new node
             // Recursive case: compare IDs and go left or right
 
-            //base case
+            //base case: if node is null, create new node
             if (node == null)
             {
                 return new TreeNode(employee);
@@ -250,19 +249,18 @@ namespace Lab9_BST
 
         private Employee? SearchRecursive(TreeNode? node, int employeeId)
         {
-            // TODO: Implement recursive search logic
             // Base case: if node is null, return null (not found)
-            // Base case: if node matches, return employee
-            // Recursive case: compare IDs and go left or right
             if (node == null)
             {
                 return null; //not found
             }
 
+            // Base case: if node matches, return employee
             if (employeeId == node.Employee.EmployeeId)
             {
                 return node.Employee; //Found
             }
+            // Recursive case: compare IDs and go left or right
             else if (employeeId < node.Employee.EmployeeId)
             {
                 return SearchRecursive(node.Left, employeeId); //go left
@@ -319,8 +317,7 @@ namespace Lab9_BST
         /// <returns>True if tree is empty, false if it contains employees</returns>
         public bool IsEmpty()
         {
-            // STUDENT NOTE: A tree is empty when the root node is null
-            // This is the simplest possible tree operation!
+            // A tree is empty when the root node is null
             return root == null;
         }
 
