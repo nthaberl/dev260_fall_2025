@@ -59,6 +59,11 @@ namespace FileSystemNavigator
             {
                 return false;
             }
+            if (size <= 0)
+            {
+                Console.WriteLine("❌ Please provide a valid file size");
+                return false;
+            }
 
             //creating FileNode as a File type
             var newFile = new FileNode(fileName, FileType.File, size);
