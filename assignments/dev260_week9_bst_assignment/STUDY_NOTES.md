@@ -14,7 +14,7 @@ Answer:
 **Biggest challenge faced:**
 *[Describe the most difficult part of the assignment - was it recursive tree algorithms, custom file/directory comparison logic, or complex BST deletion?]*
 
-Answer: SearchNode without file extension
+Answer: SearchNode without file extension -- "without full path" really threw me for a loop
 
 **How you solved it:**
 *[Explain your solution approach and what helped you figure it out - research, debugging, testing strategies, etc.]*

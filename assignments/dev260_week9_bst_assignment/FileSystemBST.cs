@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 
 namespace FileSystemNavigator
 {
@@ -37,8 +38,6 @@ namespace FileSystemNavigator
         // ============================================
 
         /// <summary>
-        /// TODO #1: Create a new file in the file system
-        /// 
         /// Requirements:
         /// - Insert file into BST maintaining proper ordering
         /// - Use file name for BST comparison (case-insensitive)
@@ -55,16 +54,13 @@ namespace FileSystemNavigator
         {
             operationCount++;
 
-            // TODO: Implement file creation logic
-            // Hints:
-            // 1. Create FileNode with FileType.File and provided size
-
             //looking for duplicates, return false if there is one
             if (FindFile(fileName) != null)
             {
                 return false;
             }
 
+            //creating FileNode as a File type
             var newFile = new FileNode(fileName, FileType.File, size);
 
             //inserting into BST with helper method
@@ -73,8 +69,6 @@ namespace FileSystemNavigator
         }
 
         /// <summary>
-        /// TODO #2: Create a new directory in the file system
-        /// 
         /// Requirements:
         /// - Insert directory into BST with FileType.Directory
         /// - Directories should sort before files with same name
@@ -90,20 +84,17 @@ namespace FileSystemNavigator
         {
             operationCount++;
 
-
+            //return false if duplicate found
             if (FindFile(directoryName) != null)
             {
                 return false;
             }
-            // TODO: Implement directory creation logic
-            // Hints:
-            // 1. Create FileNode with FileType.Directory
 
+            //creating FileNode as Directory type
             var newDirectory = new FileNode(directoryName, FileType.Directory);
             root = InsertNode(root, newDirectory);
+
             return true;
-            // 2. Use same insertion logic as CreateFile but with different type
-            // 3. Directories automatically have size = 0 and no extension
         }
 
         /// <summary>
@@ -133,8 +124,6 @@ namespace FileSystemNavigator
         }
 
         /// <summary>
-        /// TODO #4: Find all files with a specific extension
-        /// 
         /// Requirements:
         /// - Traverse entire BST collecting files with matching extension
         /// - Case-insensitive extension comparison (.txt = .TXT)
@@ -152,11 +141,23 @@ namespace FileSystemNavigator
 
             // TODO: Implement extension-based file search
             // Hints:
+
+            //ensuring the extension starts with leading .
+            if (!extension.StartsWith("."))
+            {
+                extension = "." + extension;
+            }
+
+            //list to store matching files
+            var matchingFiles = new List<FileNode>();
+
+            TraverseAndCollect(root, matchingFiles, fileNode => string.Equals(fileNode.Extension, extension, StringComparison.OrdinalIgnoreCase));
+
+            return matchingFiles;
+
             // 1. Use TraverseAndCollect helper method
             // 2. Filter by FileType.File AND matching extension
             // 3. Handle extension format (with or without leading dot)
-
-            throw new NotImplementedException("FindFilesByExtension method needs implementation");
         }
 
         /// <summary>
@@ -343,7 +344,24 @@ namespace FileSystemNavigator
             // Base case: if node is null, return
             // Recursive case: traverse left, process current, traverse right
             // Add to collection only if filter returns true
-            throw new NotImplementedException("TraverseAndCollect helper method needs implementation");
+
+            //base case
+            if (node == null)
+            {
+                return;
+            }
+
+            //traverse left subtree first
+            TraverseAndCollect(node.Left, collection, filter);
+
+            //process current
+            if (filter(node.FileData))
+            {
+                collection.Add(node.FileData);
+            }
+
+            //traverse right
+            TraverseAndCollect(node.Right, collection, filter);
         }
 
         /// <summary>
