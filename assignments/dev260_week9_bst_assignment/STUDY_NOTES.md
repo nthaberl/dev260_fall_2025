@@ -14,7 +14,7 @@ Answer:
 **Biggest challenge faced:**
 *[Describe the most difficult part of the assignment - was it recursive tree algorithms, custom file/directory comparison logic, or complex BST deletion?]*
 
-Answer: SearchNode without file extension -- "without full path" really threw me for a loop
+Answer: 
 
 **How you solved it:**
 *[Explain your solution approach and what helped you figure it out - research, debugging, testing strategies, etc.]*
@@ -24,7 +24,7 @@ Answer:
 **Most confusing concept:**
 *[What was hardest to understand about BST operations, recursive thinking, or file system hierarchies?]*
 
-Answer:
+Answer: I always struggled with recursive thinking in the past but using 
 
 ## Code Quality
 
@@ -48,13 +48,13 @@ Answer:
 **What you learned about tree algorithms:**
 *[What insights did you gain about recursive thinking, tree traversal, and hierarchical data organization?]*
 
-Answer:
+Answer: 
 
 ## Stretch Features
 
 *[If you implemented any extra credit features like file pattern matching or directory size analysis, describe them here. If not, write "None implemented"]*
 
-Answer:
+Answer: N/A
 
 ## Time Spent
 
@@ -69,3 +69,4 @@ Answer:
 - Writing these notes: [X hours]
 
 **Most time-consuming part:** [Which aspect took the longest and why - recursive thinking, BST deletion, custom comparison logic, etc.]
+

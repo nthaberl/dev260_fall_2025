@@ -247,8 +247,7 @@ namespace FileSystemNavigator
         }
 
         /// <summary>
-        /// TODO #8: Delete a file or directory from the system
-        /// 
+
         /// Requirements:
         /// - Remove item from BST maintaining tree structure
         /// - Handle all three deletion cases (no children, one child, two children)
@@ -264,14 +263,123 @@ namespace FileSystemNavigator
         {
             operationCount++;
 
-            // TODO: Implement file/directory deletion
-            // Hints:
-            // 1. Find the node to delete first
-            // 2. Handle three cases: no children, one child, two children
-            // 3. For two children case, find inorder successor
-            // 4. Update tree structure properly
+            if (root == null)
+            {
+                return false; // Tree is empty, cannot delete
+            }
 
-            throw new NotImplementedException("DeleteItem method needs implementation");
+            TreeNode? parent = null;
+            TreeNode? current = root;
+            bool found = false;
+
+            var searchNode = new FileNode(fileName, FileType.File);
+
+            // Find the node to delete and its parent
+            while (current != null)
+            {
+                int comparison = CompareFileNodes(searchNode, current.FileData);
+
+                //comparison found, break out of loop
+                if (comparison == 0)
+                {
+                    found = true;
+                    break;
+                }
+
+                parent = current;
+                if (comparison < 0)
+                {
+                    current = current.Left;
+                }
+                else
+                {
+                    current = current.Right;
+                }
+            }
+
+            if (!found)
+            {
+                return false; // node not found
+            }
+
+            // Case 1: no children 
+            if (current.Left == null && current.Right == null)
+            {
+                if (parent == null) // Deleting root node
+                {
+                    root = null;
+                }
+                else if (parent.Left == current)
+                {
+                    parent.Left = null;
+                }
+                else
+                {
+                    parent.Right = null;
+                }
+            }
+
+            // Case 2: Node has one child (only right child)
+            else if (current.Left == null)
+            {
+                if (parent == null)
+                {
+                    root = current.Right;
+                }
+                else if (parent.Left == current)
+                {
+                    parent.Left = current.Right;
+                }
+                else
+                {
+                    parent.Right = current.Right;
+                }
+            }
+            // Case 2: Node has one child (only left child)
+            else if (current.Right == null)
+            {
+                if (parent == null)
+                {
+                    root = current.Left;
+                }
+                else if (parent.Left == current)
+                {
+                    parent.Left = current.Left;
+                }
+                else
+                {
+                    parent.Right = current.Left;
+                }
+            }
+            // Case 3: Node has two children
+            else
+            {
+                // Find in-order successor (smallest in right subtree)
+                TreeNode successorParent = current;
+                TreeNode successor = current.Right;
+
+                while (successor.Left != null)
+                {
+                    successorParent = successor;
+                    successor = successor.Left;
+                }
+
+                // Copying successor's FileData to current node
+                current.FileData = successor.FileData;
+
+                // Delete successor node
+                if (successorParent.Left == successor)
+                {
+                    successorParent.Left = successor.Right;
+                }
+                else
+                {
+                    successorParent.Right = successor.Right;
+                }
+            }
+
+            return true; 
+
         }
 
         // ============================================
@@ -319,7 +427,8 @@ namespace FileSystemNavigator
                 return null;
             }
 
-            int comparison = string.Compare(fileName, node.FileData.Name, StringComparison.OrdinalIgnoreCase);
+            var searchNode = new FileNode(fileName, FileType.File);
+            int comparison = CompareFileNodes(searchNode, node.FileData);
 
             //if names match, return node.fileData
             if (comparison == 0)
