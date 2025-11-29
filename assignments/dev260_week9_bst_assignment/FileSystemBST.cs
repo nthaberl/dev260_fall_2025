@@ -98,8 +98,6 @@ namespace FileSystemNavigator
         }
 
         /// <summary>
-        /// TODO #3: Find a specific file by exact name
-        /// 
         /// Requirements:
         /// - Search BST efficiently using file name as key
         /// - Case-insensitive search
@@ -149,11 +147,14 @@ namespace FileSystemNavigator
             }
 
             //list to store matching files
-            var matchingFiles = new List<FileNode>();
+            var matchList = new List<FileNode>();
 
-            TraverseAndCollect(root, matchingFiles, fileNode => string.Equals(fileNode.Extension, extension, StringComparison.OrdinalIgnoreCase));
+            //using helper method to collect files that match the extension, case-insensitive
+            TraverseAndCollect(root, matchList, fileNode => 
+            fileNode.Type == FileType.File && 
+            string.Equals(fileNode.Extension, extension, StringComparison.OrdinalIgnoreCase));
 
-            return matchingFiles;
+            return matchList;
 
             // 1. Use TraverseAndCollect helper method
             // 2. Filter by FileType.File AND matching extension
@@ -161,8 +162,6 @@ namespace FileSystemNavigator
         }
 
         /// <summary>
-        /// TODO #5: Find all files within a size range
-        /// 
         /// Requirements:
         /// - Search for files between minSize and maxSize (inclusive)
         /// - Only include FileType.File items (not directories)
@@ -185,7 +184,21 @@ namespace FileSystemNavigator
             // 2. Use TraverseAndCollect with size range filter
             // 3. Only include FileType.File items
 
-            throw new NotImplementedException("FindFilesBySize method needs implementation");
+            var matchList = new List<FileNode>();
+
+            //minSize cannot be greater than maxSize
+            if (minSize > maxSize)
+            {
+                Console.WriteLine("❌Minimum size cannnot be greater than maximum size!");
+                return matchList;
+            }
+
+            TraverseAndCollect(root, matchList, fileNode =>
+            fileNode.Type == FileType.File &&
+            fileNode.Size >= minSize &&
+            fileNode.Size <= maxSize);
+
+            return matchList;
         }
 
         /// <summary>

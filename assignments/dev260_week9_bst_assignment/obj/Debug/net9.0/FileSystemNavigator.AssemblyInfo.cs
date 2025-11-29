@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FileSystemNavigator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+32af45b2efc3ac76005fee3e4758418989e968ce")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7641ac50292fdfa12a514b31b8d59211d9d2fd87")]
 [assembly: System.Reflection.AssemblyProductAttribute("FileSystemNavigator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FileSystemNavigator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
