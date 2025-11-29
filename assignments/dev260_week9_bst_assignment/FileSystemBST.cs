@@ -58,18 +58,18 @@ namespace FileSystemNavigator
             // TODO: Implement file creation logic
             // Hints:
             // 1. Create FileNode with FileType.File and provided size
-            // var newFile = new FileNode(fileName, FileType.File, size);
 
-            // if (FindFile(fileName != null))
-            // {
-            //     return false;
-            // }
-            // 2. Insert into BST using InsertNode helper method
-            // 3. Handle duplicate file names (return false if exists)
-            // 4. Extension will be automatically extracted in FileNode constructor
-            // root = InsertNode(root, newFile);
-            // return true;
-            throw new NotImplementedException("CreateFile method needs implementation");
+            //looking for duplicates, return false if there is one
+            if (FindFile(fileName) != null)
+            {
+                return false;
+            }
+
+            var newFile = new FileNode(fileName, FileType.File, size);
+
+            //inserting into BST with helper method
+            root = InsertNode(root, newFile);
+            return true;
         }
 
         /// <summary>
@@ -90,13 +90,20 @@ namespace FileSystemNavigator
         {
             operationCount++;
 
+
+            if (FindFile(directoryName) != null)
+            {
+                return false;
+            }
             // TODO: Implement directory creation logic
             // Hints:
             // 1. Create FileNode with FileType.Directory
+
+            var newDirectory = new FileNode(directoryName, FileType.Directory);
+            root = InsertNode(root, newDirectory);
+            return true;
             // 2. Use same insertion logic as CreateFile but with different type
             // 3. Directories automatically have size = 0 and no extension
-
-            throw new NotImplementedException("CreateDirectory method needs implementation");
         }
 
         /// <summary>
@@ -117,14 +124,12 @@ namespace FileSystemNavigator
         {
             operationCount++;
 
-            // TODO: Implement file search logic
-            // Hints:
             // 1. Use SearchNode helper method with recursive approach
             // 2. Compare file names case-insensitively
             // 3. Return the FileNode.FileData if found
-            //return FileNode.FileData;
 
-            throw new NotImplementedException("FindFile method needs implementation");
+            //SearchNode help functions handles all these steps, so only need to call the function
+            return SearchNode(root, fileName);
         }
 
         /// <summary>
@@ -302,17 +307,14 @@ namespace FileSystemNavigator
         /// </summary>
         private FileNode? SearchNode(TreeNode? node, string fileName)
         {
-            // TODO: Implement recursive BST search
-            // Base case: if node is null, return null
 
+            // Base case: if node is null, return null
             if (node == null)
             {
                 return null;
             }
 
-            var searchFileNode = new FileNode(fileName, FileType.File);
-
-            int comparison = CompareFileNodes(searchFileNode, node.FileData);
+            int comparison = string.Compare(fileName, node.FileData.Name, StringComparison.OrdinalIgnoreCase);
 
             //if names match, return node.fileData
             if (comparison == 0)
