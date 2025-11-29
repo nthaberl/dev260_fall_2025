@@ -137,9 +137,6 @@ namespace FileSystemNavigator
         {
             operationCount++;
 
-            // TODO: Implement extension-based file search
-            // Hints:
-
             //ensuring the extension starts with leading .
             if (!extension.StartsWith("."))
             {
@@ -149,16 +146,12 @@ namespace FileSystemNavigator
             //list to store matching files
             var matchList = new List<FileNode>();
 
-            //using helper method to collect files that match the extension, case-insensitive
-            TraverseAndCollect(root, matchList, fileNode => 
-            fileNode.Type == FileType.File && 
+            //using helper method to collect files that match the extension, is type File, case-insensitive
+            TraverseAndCollect(root, matchList, fileNode =>
+            fileNode.Type == FileType.File &&
             string.Equals(fileNode.Extension, extension, StringComparison.OrdinalIgnoreCase));
 
             return matchList;
-
-            // 1. Use TraverseAndCollect helper method
-            // 2. Filter by FileType.File AND matching extension
-            // 3. Handle extension format (with or without leading dot)
         }
 
         /// <summary>
@@ -178,15 +171,10 @@ namespace FileSystemNavigator
         {
             operationCount++;
 
-            // TODO: Implement size-based file search
-            // Hints:
-            // 1. Validate input parameters (minSize <= maxSize)
-            // 2. Use TraverseAndCollect with size range filter
-            // 3. Only include FileType.File items
-
+            //list to store files that match parameters
             var matchList = new List<FileNode>();
 
-            //minSize cannot be greater than maxSize
+            //validating input parameters
             if (minSize > maxSize)
             {
                 Console.WriteLine("❌Minimum size cannnot be greater than maximum size!");
@@ -202,8 +190,6 @@ namespace FileSystemNavigator
         }
 
         /// <summary>
-        /// TODO #6: Find the N largest files in the system
-        /// 
         /// Requirements:
         /// - Collect all files and sort by size (descending)
         /// - Return top N largest files
@@ -219,14 +205,22 @@ namespace FileSystemNavigator
         {
             operationCount++;
 
-            // TODO: Implement largest files search
-            // Hints:
-            // 1. Collect all files using traversal
-            // 2. Sort by Size property (descending)
-            // 3. Take top 'count' items
-            // 4. Handle edge case where count <= 0
+            var results = new List<FileNode>();
 
-            throw new NotImplementedException("FindLargestFiles method needs implementation");
+            //handling edge case however FileSystemNavigator already handles this case :)
+            if (count <= 0)
+            {
+                Console.WriteLine("❌ Count must be greater than 0");
+                return results;
+            }
+
+            //traverse and collect all files of File type
+            TraverseAndCollect(root, results, fileNode => fileNode.Type == FileType.File);
+
+            //using LINQ to order results
+            return results.OrderByDescending(file => file.Size)
+            .Take(count)
+            .ToList();
         }
 
         /// <summary>
@@ -246,13 +240,10 @@ namespace FileSystemNavigator
         {
             operationCount++;
 
-            // TODO: Implement total size calculation
-            // Hints:
-            // 1. Use recursive helper method to traverse tree
-            // 2. Sum the Size property of all nodes
-            // 3. Handle empty tree case (return 0)
+            //hints said to use recursive helper method so created one
+            //see CalculateTotalSizeRecursive to see implementation
 
-            throw new NotImplementedException("CalculateTotalSize method needs implementation");
+            return CalculateTotalSizeRecursive(root);
         }
 
         /// <summary>
@@ -353,11 +344,6 @@ namespace FileSystemNavigator
         /// </summary>
         private void TraverseAndCollect(TreeNode? node, List<FileNode> collection, Func<FileNode, bool> filter)
         {
-            // TODO: Implement in-order traversal with filtering
-            // Base case: if node is null, return
-            // Recursive case: traverse left, process current, traverse right
-            // Add to collection only if filter returns true
-
             //base case
             if (node == null)
             {
@@ -367,7 +353,7 @@ namespace FileSystemNavigator
             //traverse left subtree first
             TraverseAndCollect(node.Left, collection, filter);
 
-            //process current
+            //process current, only add if true
             if (filter(node.FileData))
             {
                 collection.Add(node.FileData);
@@ -375,6 +361,18 @@ namespace FileSystemNavigator
 
             //traverse right
             TraverseAndCollect(node.Right, collection, filter);
+        }
+
+        private long CalculateTotalSizeRecursive(TreeNode? node)
+        {
+            //empty tree case
+            if (node == null)
+            {
+                return 0;
+            }
+
+            //sum of Size of current node + left + right 
+            return node.FileData.Size + CalculateTotalSizeRecursive(node.Left) + CalculateTotalSizeRecursive(node.Right);
         }
 
         /// <summary>
