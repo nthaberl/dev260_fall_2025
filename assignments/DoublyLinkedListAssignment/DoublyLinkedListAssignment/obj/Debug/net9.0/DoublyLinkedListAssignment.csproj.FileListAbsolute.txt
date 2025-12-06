@@ -1,0 +1,15 @@
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\doublylinkedlistassignment\doublylinkedlistassignment\bin\Debug\net9.0\DoublyLinkedListAssignment.exe
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\doublylinkedlistassignment\doublylinkedlistassignment\bin\Debug\net9.0\DoublyLinkedListAssignment.deps.json
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\doublylinkedlistassignment\doublylinkedlistassignment\bin\Debug\net9.0\DoublyLinkedListAssignment.runtimeconfig.json
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\doublylinkedlistassignment\doublylinkedlistassignment\bin\Debug\net9.0\DoublyLinkedListAssignment.dll
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\doublylinkedlistassignment\doublylinkedlistassignment\bin\Debug\net9.0\DoublyLinkedListAssignment.pdb
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\doublylinkedlistassignment\doublylinkedlistassignment\obj\Debug\net9.0\DoublyLinkedListAssignment.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\doublylinkedlistassignment\doublylinkedlistassignment\obj\Debug\net9.0\DoublyLinkedListAssignment.AssemblyInfoInputs.cache
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\doublylinkedlistassignment\doublylinkedlistassignment\obj\Debug\net9.0\DoublyLinkedListAssignment.AssemblyInfo.cs
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\doublylinkedlistassignment\doublylinkedlistassignment\obj\Debug\net9.0\DoublyLinkedListAssignment.csproj.CoreCompileInputs.cache
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\doublylinkedlistassignment\doublylinkedlistassignment\obj\Debug\net9.0\DoublyLinkedListAssignment.sourcelink.json
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\doublylinkedlistassignment\doublylinkedlistassignment\obj\Debug\net9.0\DoublyLinkedListAssignment.dll
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\doublylinkedlistassignment\doublylinkedlistassignment\obj\Debug\net9.0\refint\DoublyLinkedListAssignment.dll
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\doublylinkedlistassignment\doublylinkedlistassignment\obj\Debug\net9.0\DoublyLinkedListAssignment.pdb
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\doublylinkedlistassignment\doublylinkedlistassignment\obj\Debug\net9.0\DoublyLinkedListAssignment.genruntimeconfig.cache
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\assignments\doublylinkedlistassignment\doublylinkedlistassignment\obj\Debug\net9.0\ref\DoublyLinkedListAssignment.dll
