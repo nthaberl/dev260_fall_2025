@@ -529,7 +529,7 @@ namespace Assignment10
                     }
                 }
             }
-            
+
             return null; //no route found
         }
 
@@ -597,29 +597,87 @@ namespace Assignment10
         /// <returns>List of airport codes representing cheapest route, or null if no route exists</returns>
         public List<string>? FindCheapestRoute(string origin, string destination)
         {
-            // TODO ASSIGNMENT: Implement Dijkstra's algorithm
-            // Hint: Validate inputs similar to FindRoute
-            // Hint: Create PriorityQueue<string, decimal> for min-cost extraction
-            // Hint: Create Dictionary<string, decimal> for distance tracking
-            // Hint: Create Dictionary<string, string> for parent tracking
-            // Hint: Create HashSet<string> for visited tracking
-            // Hint: Initialize all distances to decimal.MaxValue
-            // Hint: Set distances[origin] = 0
-            // Hint: Enqueue origin with priority 0
-            // Hint: While loop: while (priorityQueue.Count > 0)
-            // Hint: Dequeue current airport (minimum cost)
-            // Hint: Skip if visited.Contains(current) - avoid reprocessing
-            // Hint: Mark current as visited
-            // Hint: Check if current == destination, return ReconstructPath if so
-            // Hint: Loop through routes[current] for each flight
-            // Hint: Calculate newCost = distances[current] + flight.Cost
-            // Hint: Relaxation: if (newCost < distances[neighbor])
-            // Hint:   Update distances[neighbor] = newCost
-            // Hint:   Update parents[neighbor] = current
-            // Hint:   Enqueue neighbor with priority newCost
-            // Hint: Return null if destination never reached
+            if (string.IsNullOrWhiteSpace(origin) || string.IsNullOrWhiteSpace(destination))
+            {
+                return null; //invalid input
+            }
 
-            throw new NotImplementedException("FindCheapestRoute method not yet implemented");
+            string originUpper = origin.ToUpperInvariant();
+            string destinationUpper = destination.ToUpperInvariant();
+
+            if (!airports.ContainsKey(originUpper) || !airports.ContainsKey(destinationUpper))
+            {
+                return null; //origin and/or destination airport does not exist
+            }
+
+            if (originUpper == destinationUpper)
+            {
+                return new List<string> { originUpper }; //special case: same airport
+            }
+
+            //intializing Dijsktra's structures
+            PriorityQueue<string, decimal> priorityQueue = new PriorityQueue<string, decimal>();
+            Dictionary<string, decimal> distances = new Dictionary<string, decimal>(StringComparer.OrdinalIgnoreCase);
+            Dictionary<string, string> parents = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+            HashSet<string> visited = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
+            //setting initial distances to infinity
+            foreach (string aiportCode in airports.Keys)
+            {
+                distances[aiportCode] = decimal.MaxValue;
+            }
+
+            //set origin distance to 0 and Enqueue
+            distances[originUpper] = 0;
+            priorityQueue.Enqueue(originUpper, 0);
+
+            while (priorityQueue.Count > 0)
+            {
+                //current = what was just added in
+                string current = priorityQueue.Dequeue();
+
+                //skip if already visited
+                if (visited.Contains(current))
+                {
+                    continue;
+                }
+
+                visited.Add(current);
+
+                //check to see if we've reached destination
+                if (current.Equals(destinationUpper, StringComparison.OrdinalIgnoreCase))
+                {
+                    return ReconstructPath(parents, originUpper, destinationUpper);
+                }
+
+                //explore neighbors (outgoing flights) if we still havent found destination
+                if (routes.ContainsKey(current))
+                {
+                    foreach (Flight flight in routes[current])
+                    {
+                        string neighbor = flight.Destination.ToUpperInvariant();
+
+                        if (visited.Contains(neighbor))
+                        {
+                            continue; //skip since we already visited
+                        }
+
+                        //calculate new cost via this route
+                        decimal newCost = distances[current] + flight.Cost;
+
+                        //if this route is cheaper, update distance and parent
+                        if (newCost < distances[neighbor])
+                        {
+                            distances[neighbor] = newCost;
+                            parents[neighbor] = current; //track parent for path reconstruction
+                            priorityQueue.Enqueue(neighbor, newCost); //Enqueue with updated cost
+                        }
+                    }
+                }
+            }
+
+            //no route found
+            return null;
         }
 
         #endregion
@@ -725,15 +783,16 @@ namespace Assignment10
         /// <returns>List of airport codes sorted by connection count (descending)</returns>
         public List<string> FindHubAirports(int topN)
         {
-            // TODO ASSIGNMENT: Implement hub airport identification
-            // Hint: Return empty list if topN <= 0
-            // Hint: Use routes dictionary - each airport's Value.Count is its degree
-            // Hint: Use LINQ: routes.OrderByDescending(kvp => kvp.Value.Count)
-            // Hint: Use .Take(topN) to limit results
-            // Hint: Use .Select(kvp => kvp.Key) to extract airport codes
-            // Hint: Use .ToList() to convert to list
+            if (topN <= 0)
+            {
+                return new List<string>();
+            }
 
-            throw new NotImplementedException("FindHubAirports method not yet implemented");
+            return routes
+            .OrderByDescending(kvp => kvp.Value.Count)
+            .Take(topN)
+            .Select(kvp => kvp.Key) //only need airport code for display
+            .ToList();
         }
 
         /// <summary>
