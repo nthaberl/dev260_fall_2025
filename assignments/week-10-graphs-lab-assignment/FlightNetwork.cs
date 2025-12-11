@@ -424,12 +424,6 @@ namespace Assignment10
         /// <returns>Cheapest flight, or null if no direct flight exists</returns>
         public Flight? FindCheapestDirectFlight(string origin, string destination)
         {
-            // TODO ASSIGNMENT: Implement cheapest flight search
-            // Hint: Call FindDirectFlights(origin, destination) to get all options
-            // Hint: Check if the list is empty and return null if so
-            // Hint: Use .OrderBy(f => f.Cost).First() to find minimum cost flight
-            // Alternative: Use .MinBy(f => f.Cost) if available in your .NET version
-
             //get all flights between origin and destination
             List<Flight> directFlights = FindDirectFlights(origin, destination);
 
@@ -447,8 +441,6 @@ namespace Assignment10
         #region BFS Pathfinding (Student Implementation)
 
         /// <summary>
-        /// TODO #4: Find Any Valid Route Using BFS
-        /// 
         /// Use breadth-first search to find any valid route between two airports.
         /// Requirements:
         /// - Validate inputs and check that both airports exist in the graph
@@ -477,19 +469,6 @@ namespace Assignment10
         /// <returns>List of airport codes in route order, or null if no route exists</returns>
         public List<string>? FindRoute(string origin, string destination)
         {
-            // Hint: Validate inputs (null/empty check)
-            // Hint: Convert to uppercase and verify airports exist in graph
-            // Hint: Handle special case: if origin == destination, return single-element list
-            // Hint: Create Queue<string>, HashSet<string> visited, Dictionary<string, string> parents
-            // Hint: Enqueue origin, mark as visited
-            // Hint: While loop: while (queue.Count > 0)
-            // Hint: Dequeue current airport
-            // Hint: Check if current == destination, if so call ReconstructPath() helper
-            // Hint: Loop through routes[current] to explore neighbors
-            // Hint: For each unvisited neighbor: mark visited, record parent, enqueue
-            // Hint: Return null if queue empties without finding destination
-
-
             //BFS is simplest to implement for graph traversal
 
             //guard clause for inputs
@@ -555,8 +534,6 @@ namespace Assignment10
         }
 
         /// <summary>
-        /// TODO #5: Find Shortest Route by Number of Stops
-        /// 
         /// Find the route with the fewest number of stops (airports) using BFS.
         /// Requirements:
         /// - BFS naturally finds shortest path in unweighted graphs
@@ -573,13 +550,11 @@ namespace Assignment10
         /// <returns>List of airport codes representing shortest route, or null if no route exists</returns>
         public List<string>? FindShortestRoute(string origin, string destination)
         {
-            // TODO ASSIGNMENT: Implement shortest route by stops
-            // Hint: BFS already finds shortest path by hop count
-            // Hint: Simply call and return FindRoute(origin, destination)
             // Note: This method exists to make the distinction clear between
             //       "shortest by stops" (BFS) and "cheapest by cost" (Dijkstra's)
 
-            throw new NotImplementedException("FindShortestRoute method not yet implemented");
+            //find route utilizes BFS, so this is already taken care of!
+            return FindRoute(origin, destination);
         }
 
         #endregion
