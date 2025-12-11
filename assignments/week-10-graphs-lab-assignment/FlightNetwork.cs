@@ -891,7 +891,7 @@ namespace Assignment10
                     stats.AppendLine("\n=== Flight Statistics ===");
                     stats.AppendLine($"Average Cost: ${avgCost:F2}");
                     stats.AppendLine($"Cost Range: ${minCost:F2} - {maxCost:F2}");
-                    stats.AppendLine($"Average Duration: {avgDuration:F1} minutes ({avgDuration/60.0:F1} hours)");
+                    stats.AppendLine($"Average Duration: {avgDuration:F1} minutes ({avgDuration / 60.0:F1} hours)");
                     stats.AppendLine($"Duration Range: {minDuration} - {maxDuration} minutes");
                 }
             }
@@ -900,8 +900,6 @@ namespace Assignment10
         }
 
         /// <summary>
-        /// TODO #10: Find Isolated Airports
-        /// 
         /// Find airports that have no incoming or outgoing flights.
         /// Requirements:
         /// - Build set of airports that have incoming flights (destinations)
@@ -918,19 +916,36 @@ namespace Assignment10
         /// <returns>List of isolated airport codes</returns>
         public List<string> FindIsolatedAirports()
         {
-            // TODO ASSIGNMENT: Implement isolated airport detection
-            // Hint: Create empty List<string> isolated for results
-            // Hint: Create HashSet<string> hasIncoming to track airports with incoming flights
-            // Hint: Loop through routes.Values (all flight lists)
-            // Hint:   Loop through each flight in the list
-            // Hint:   Add flight.Destination to hasIncoming set
-            // Hint: Loop through airports.Keys to check each airport
-            // Hint:   Check hasOutgoing: routes.ContainsKey(code) && routes[code].Count > 0
-            // Hint:   Check hasIncomingFlights: hasIncoming.Contains(code)
-            // Hint:   If BOTH are false (no outgoing AND no incoming), add to isolated list
-            // Hint: Return isolated.OrderBy(code => code).ToList() for sorted output
+            List<string> isolated = new List<string>();
 
-            throw new NotImplementedException("FindIsolatedAirports method not yet implemented");
+            //build a set of airports with incoming flights
+            HashSet<string> hasIncoming = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+            foreach (var flightList in routes.Values)
+            {
+                foreach (var flight in flightList)
+                {
+                    hasIncoming.Add(flight.Destination.ToUpperInvariant());
+                }
+            }
+
+            //check each airport for outgoing and incoming connections (isolation)
+            foreach (var airportCode in airports.Keys)
+            {
+                //no outgoing flights
+                bool hasOutgoing = routes.ContainsKey(airportCode) && routes[airportCode].Count > 0;
+
+                //no incoming flights
+                bool hasIncomingFlights = hasIncoming.Contains(airportCode);
+
+                //truly isolate
+                if (!hasOutgoing && !hasIncomingFlights)
+                {
+                    isolated.Add(airportCode);
+                }
+            }
+
+            //if something is returned that means there is an isolated vertex which is bad!
+            return isolated.OrderBy(code => code).ToList();
         }
 
         #endregion

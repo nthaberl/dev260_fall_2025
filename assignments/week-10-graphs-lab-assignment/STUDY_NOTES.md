@@ -60,7 +60,7 @@ Answer:
 **What you would improve if you had more time:**
 [Identify areas for potential improvement - perhaps optimizing priority queue usage, adding more comprehensive error handling, implementing bidirectional search, or adding visualization features]
 
-Answer: I would love to flesh out the methods, will tackle it during winter break!
+Answer: I'd like to flesh out the extra credit and understand the traversals more deeply. I have a surface level understanding, but graphs are used in so many different applications I'd like to be more comfortable with them!
 
 ## Real-World Applications
 
@@ -114,9 +114,9 @@ Answer: Not implemented - only completed the lab portion
 **Most important lesson learned:**
 [What's the single most valuable insight you gained from this assignment about graph algorithms, pathfinding, or algorithm design?]
 
-Answer:
+Answer: This assignment was my first exposure to graphs. The single most valuable insight I gained was that graph algorithms are more involved and you have to be more meticulous than basic iterations in simpler structures. You have keep track of what you've already visited to avoid repeating or ending up in an infinite loop. 
 
 **How this changed your understanding of data structures:**
-[How did working with graphs expand your perspective on data organization compared to arrays, linked lists, trees, etc.?]
+*[How did working with graphs expand your perspective on data organization compared to arrays, linked lists, trees, etc.?]*
 
-Answer:
+Answer: This assignment helped shape my understanding of data organization by showing me that graphs are an abstract structure, an idea that didn't really click for me until this assignment. Graphs are very flexible and can easily represent real-world systems, instead of  forcing those systems into more rigid structures. 
