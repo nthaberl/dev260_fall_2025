@@ -264,7 +264,6 @@ namespace Assignment10
         /// </summary>
         public void DisplayAllAirports()
         {
-            // TODO LAB: Implement airport display
             // Hint: Check if airports.Count == 0, display message and return
             // Hint: Display header with count using string interpolation
             // Hint: Use foreach loop over airports.Values.OrderBy(a => a.Code)
@@ -287,8 +286,6 @@ namespace Assignment10
         }
 
         /// <summary>
-        /// TODO LAB #5: Get Airport by Code
-        /// 
         /// Retrieve an airport from the graph by its code.
         /// Requirements:
         /// - Validate the code parameter
@@ -306,7 +303,6 @@ namespace Assignment10
         /// <returns>Airport object or null if not found</returns>
         public Airport? GetAirport(string code)
         {
-            // TODO LAB: Implement airport retrieval
             // Hint: Check if code is null or whitespace, return null if so
             // Hint: Convert code to uppercase: code.ToUpperInvariant()
             // Hint: Check if airports.ContainsKey(upperCode)
@@ -346,7 +342,6 @@ namespace Assignment10
         /// <returns>List of direct flights, or empty list if none exist</returns>
         public List<Flight> FindDirectFlights(string origin, string destination)
         {
-            // TODO ASSIGNMENT: Implement direct flight search
             // Hint: Validate inputs first (check for null/empty strings)
             // Hint: Use ToUpperInvariant() for consistent airport code comparison
             // Hint: Check if routes.ContainsKey(origin) before accessing
@@ -482,7 +477,6 @@ namespace Assignment10
         /// <returns>List of airport codes in route order, or null if no route exists</returns>
         public List<string>? FindRoute(string origin, string destination)
         {
-            // TODO ASSIGNMENT: Implement BFS pathfinding
             // Hint: Validate inputs (null/empty check)
             // Hint: Convert to uppercase and verify airports exist in graph
             // Hint: Handle special case: if origin == destination, return single-element list
@@ -495,7 +489,69 @@ namespace Assignment10
             // Hint: For each unvisited neighbor: mark visited, record parent, enqueue
             // Hint: Return null if queue empties without finding destination
 
-            throw new NotImplementedException("FindRoute method not yet implemented");
+
+            //BFS is simplest to implement for graph traversal
+
+            //guard clause for inputs
+            if (string.IsNullOrWhiteSpace(origin) || string.IsNullOrWhiteSpace(destination))
+            {
+                return null;
+            }
+
+            string originUpper = origin.ToUpperInvariant();
+            string destinationUpper = destination.ToUpperInvariant();
+
+            //checking to see if one or both airports exist
+            if (!airports.ContainsKey(originUpper) || !airports.ContainsKey(destinationUpper))
+            {
+                return null;
+            }
+
+            //special case: origin airport is the same as destination
+            if (originUpper == destinationUpper)
+            {
+                return new List<string> { originUpper };
+            }
+
+            //initialize BFS structures
+            Queue<string> queue = new Queue<string>();
+            HashSet<string> visited = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+            Dictionary<string, string> parents = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+
+            //start BFS from origin airport
+            queue.Enqueue(originUpper);
+            visited.Add(originUpper);
+
+            while (queue.Count > 0)
+            {
+                string current = queue.Dequeue();
+
+                //checking to see if we have reached destination airport
+                if (current.Equals(destinationUpper, StringComparison.OrdinalIgnoreCase))
+                {
+                    //using helper method to reconstruct path from parent map
+                    return ReconstructPath(parents, originUpper, destinationUpper);
+                }
+
+                //explore neighbors (outgoing flights)
+                if (routes.ContainsKey(current))
+                {
+                    foreach (Flight flight in routes[current])
+                    {
+                        string neighbor = flight.Destination.ToUpperInvariant();
+
+                        //if neighbor has not been visited, add them to visited hashset
+                        if (!visited.Contains(neighbor))
+                        {
+                            visited.Add(neighbor);
+                            parents[neighbor] = current; //track parent for how we reached this neighbor/vertex/airport
+                            queue.Enqueue(neighbor); //add to exploration queue
+                        }
+                    }
+                }
+            }
+            
+            return null; //no route found
         }
 
         /// <summary>
