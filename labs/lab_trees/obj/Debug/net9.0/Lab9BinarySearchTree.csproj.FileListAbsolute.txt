@@ -1,0 +1,15 @@
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\dev260_week_9_bst_lab\bin\Debug\net9.0\BinarySearchTreeLab.exe
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\dev260_week_9_bst_lab\bin\Debug\net9.0\BinarySearchTreeLab.deps.json
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\dev260_week_9_bst_lab\bin\Debug\net9.0\BinarySearchTreeLab.runtimeconfig.json
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\dev260_week_9_bst_lab\bin\Debug\net9.0\BinarySearchTreeLab.dll
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\dev260_week_9_bst_lab\bin\Debug\net9.0\BinarySearchTreeLab.pdb
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\dev260_week_9_bst_lab\obj\Debug\net9.0\Lab9BinarySearchTree.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\dev260_week_9_bst_lab\obj\Debug\net9.0\Lab9BinarySearchTree.AssemblyInfoInputs.cache
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\dev260_week_9_bst_lab\obj\Debug\net9.0\Lab9BinarySearchTree.AssemblyInfo.cs
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\dev260_week_9_bst_lab\obj\Debug\net9.0\Lab9BinarySearchTree.csproj.CoreCompileInputs.cache
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\dev260_week_9_bst_lab\obj\Debug\net9.0\Lab9BinarySearchTree.sourcelink.json
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\dev260_week_9_bst_lab\obj\Debug\net9.0\BinarySearchTreeLab.dll
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\dev260_week_9_bst_lab\obj\Debug\net9.0\refint\BinarySearchTreeLab.dll
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\dev260_week_9_bst_lab\obj\Debug\net9.0\BinarySearchTreeLab.pdb
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\dev260_week_9_bst_lab\obj\Debug\net9.0\Lab9BinarySearchTree.genruntimeconfig.cache
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\dev260_week_9_bst_lab\obj\Debug\net9.0\ref\BinarySearchTreeLab.dll

@@ -1,0 +1,15 @@
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\LoopsAndConditionalsLab\bin\Debug\net9.0\LoopsAndConditionalsLab.exe
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\LoopsAndConditionalsLab\bin\Debug\net9.0\LoopsAndConditionalsLab.deps.json
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\LoopsAndConditionalsLab\bin\Debug\net9.0\LoopsAndConditionalsLab.runtimeconfig.json
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\LoopsAndConditionalsLab\bin\Debug\net9.0\LoopsAndConditionalsLab.dll
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\LoopsAndConditionalsLab\bin\Debug\net9.0\LoopsAndConditionalsLab.pdb
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\LoopsAndConditionalsLab\obj\Debug\net9.0\LoopsAndConditionalsLab.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\LoopsAndConditionalsLab\obj\Debug\net9.0\LoopsAndConditionalsLab.AssemblyInfoInputs.cache
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\LoopsAndConditionalsLab\obj\Debug\net9.0\LoopsAndConditionalsLab.AssemblyInfo.cs
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\LoopsAndConditionalsLab\obj\Debug\net9.0\LoopsAndConditionalsLab.csproj.CoreCompileInputs.cache
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\LoopsAndConditionalsLab\obj\Debug\net9.0\LoopsAndConditionalsLab.sourcelink.json
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\LoopsAndConditionalsLab\obj\Debug\net9.0\LoopsAndConditionalsLab.dll
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\LoopsAndConditionalsLab\obj\Debug\net9.0\refint\LoopsAndConditionalsLab.dll
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\LoopsAndConditionalsLab\obj\Debug\net9.0\LoopsAndConditionalsLab.pdb
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\LoopsAndConditionalsLab\obj\Debug\net9.0\LoopsAndConditionalsLab.genruntimeconfig.cache
+C:\Users\nthab\Desktop\Bellevue College\25 Fall\dev260_fall_2025\labs\LoopsAndConditionalsLab\obj\Debug\net9.0\ref\LoopsAndConditionalsLab.dll
