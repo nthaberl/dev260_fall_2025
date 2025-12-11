@@ -397,14 +397,18 @@ namespace Assignment10
         /// <returns>Sorted list of reachable airport codes</returns>
         public List<string> GetDestinationsFrom(string origin)
         {
-            // TODO ASSIGNMENT: Implement destination listing
-            // Hint: Similar validation as FindDirectFlights
-            // Hint: Use .Select(f => f.Destination) to get destination codes
-            // Hint: Use .Distinct() to remove duplicates (multiple flights to same airport)
-            // Hint: Use .OrderBy(code => code) for alphabetical sorting
-            // Hint: Convert to List with .ToList()
+            if (string.IsNullOrWhiteSpace(origin) || !airports.ContainsKey(origin.ToUpperInvariant()))
+            {
+                return new List<string>(); // returning empty list for invalid input
+            }
 
-            throw new NotImplementedException("GetDestinationsFrom method not yet implemented");
+            string originUpper = origin.ToUpperInvariant();
+
+            return routes[originUpper]
+            .Select(f => f.Destination.ToUpperInvariant())
+            .Distinct(StringComparer.OrdinalIgnoreCase)
+            .OrderBy(code => code)
+            .ToList();
         }
 
         /// <summary>
@@ -764,8 +768,6 @@ namespace Assignment10
         #region Network Analysis (Student Implementation)
 
         /// <summary>
-        /// TODO #8: Find Hub Airports (Most Connected)
-        /// 
         /// Find the airports with the most outgoing flight connections.
         /// Requirements:
         /// - Calculate the degree (number of outgoing flights) for each airport
@@ -816,22 +818,85 @@ namespace Assignment10
         /// <returns>Formatted string with network metrics</returns>
         public string CalculateNetworkStatistics()
         {
-            // TODO ASSIGNMENT: Implement network statistics calculation
-            // Hint: Return "No airports in the network." if airports.Count == 0
-            // Hint: Calculate totalFlights = routes.Values.Sum(flights => flights.Count)
-            // Hint: Calculate avgConnections = (double)totalFlights / routes.Count
-            // Hint: Find maxConnections = routes.Max(kvp => kvp.Value.Count)
-            // Hint: Find mostConnected airports: routes.Where(kvp => kvp.Value.Count == maxConnections)
-            // Hint: Find minConnections = routes.Min(kvp => kvp.Value.Count)
-            // Hint: Find leastConnected airports: routes.Where(kvp => kvp.Value.Count == minConnections)
-            // Hint: Get all flights: routes.Values.SelectMany(flights => flights).ToList()
-            // Hint: Calculate avgCost = allFlights.Average(f => f.Cost)
-            // Hint: Calculate avgDuration = allFlights.Average(f => f.Duration)
-            // Hint: Use StringBuilder to build multi-line output
-            // Hint: Format numbers with :F2 for 2 decimal places
-            // Hint: Convert duration to hours by dividing by 60
+            //this method useful for terminal output
 
-            throw new NotImplementedException("CalculateNetworkStatistics method not yet implemented");
+            if (airports.Count == 0)
+            {
+                return "No airports in the network";
+            }
+
+            var stats = new System.Text.StringBuilder();
+            stats.AppendLine("\n=== Flight Network Statistics ===");
+
+            //basic counts
+            //total vertices (airports)
+            int totalAirports = airports.Count;
+
+            //total edges (routes)
+            int totalFlights = routes.Values.Sum(flights => flights.Count);
+
+            //appending to string
+            stats.AppendLine($"Total Airports: {totalAirports}");
+            stats.AppendLine($"Total Flights: {totalFlights}");
+
+            //avg connections per aiport
+            if (totalAirports > 0)
+            {
+                double avgConnections = (double)totalFlights / totalAirports;
+                stats.AppendLine($"Average Connections per Airport: {avgConnections:F2}");
+            }
+
+            if (routes.Count > 0)
+            {
+                int maxConnections = routes.Max(kvp => kvp.Value.Count);
+                int minConnections = routes.Min(kvp => kvp.Value.Count);
+
+                var mostConnected = routes
+                .Where(kvp => kvp.Value.Count == maxConnections)
+                .Select(kvp => kvp.Key)
+                .ToList();
+
+                var leastConnected = routes
+                .Where(kvp => kvp.Value.Count == minConnections)
+                .Select(kvp => kvp.Key)
+                .ToList();
+
+                stats.AppendLine($"\nMost connected Airports ({maxConnections} flights): ");
+                foreach (var code in mostConnected)
+                {
+                    var airport = airports[code];
+                    stats.AppendLine($" - {code} ({airport.City})");
+                }
+
+                stats.AppendLine($"\nLeast connected Airports ({minConnections} flights): ");
+                foreach (var code in leastConnected)
+                {
+                    var airport = airports[code];
+                    stats.AppendLine($" - {code} ({airport.City})");
+                }
+
+                //calculate flights stats
+                var allFlights = routes.Values.SelectMany(flights => flights).ToList();
+
+                if (allFlights.Count > 0)
+                {
+                    decimal avgCost = allFlights.Average(f => f.Cost);
+                    decimal minCost = allFlights.Min(f => f.Cost);
+                    decimal maxCost = allFlights.Max(f => f.Cost);
+
+                    double avgDuration = allFlights.Average(f => f.Duration);
+                    double minDuration = allFlights.Min(f => f.Duration);
+                    double maxDuration = allFlights.Max(f => f.Duration);
+
+                    stats.AppendLine("\n=== Flight Statistics ===");
+                    stats.AppendLine($"Average Cost: ${avgCost:F2}");
+                    stats.AppendLine($"Cost Range: ${minCost:F2} - {maxCost:F2}");
+                    stats.AppendLine($"Average Duration: {avgDuration:F1} minutes ({avgDuration/60.0:F1} hours)");
+                    stats.AppendLine($"Duration Range: {minDuration} - {maxDuration} minutes");
+                }
+            }
+
+            return stats.ToString();
         }
 
         /// <summary>
