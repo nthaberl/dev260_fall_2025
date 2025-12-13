@@ -2,2904 +2,841 @@
     {
         "name": "Simmered Fruit",
         "ingredients": [
-            {
-                "name": [
-                    "Apple",
-                    "Voltfruit",
-                    "Wildberry",
-                    "Palm Fruit",
-                    "Hydromelon"
-                ],
-                "quantity": 1
-            }
-        ]
-    },
-    {
-        "name": "Copious Simmered Fruit",
-        "ingredients": [
-            {
-                "name": [
-                    "Apple",
-                    "Voltfruit",
-                    "Wildberry",
-                    "Palm Fruit",
-                    "Hydromelon"
-                ],
-                "quantity": 1,
-                "distinct": true,
-                "count": 4
-            }
+            "Apple/Voltfruit/Wildberry/Palm Fruit/Hydromelon"
         ]
     },
     {
         "name": "Sauteed Peppers",
         "ingredients": [
-            {
-                "name": [
-                    "Spicy Pepper"
-                ],
-                "quantity": 1
-            }
+            "Spicy Pepper"
         ]
     },
     {
         "name": "Mushroom Skewer",
         "ingredients": [
-            {
-                "name": [
-                    "Hylian Shroom",
-                    "Stamella Shroom",
-                    "Chillshroom",
-                    "Sunshroom",
-                    "Rushroom",
-                    "Razorshroom",
-                    "Ironshroom",
-                    "Silent Shroom"
-                ],
-                "quantity": 1
-            }
+            "Hylian Shroom/Stamella Shroom/Chillshroom/Sunshroom/Rushroom/Razorshroom/Ironshroom/Silent Shroom"
         ]
     },
     {
         "name": "Meat Skewer",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Meat",
-                    "Raw Prime Meat",
-                    "Raw Gourmet Meat",
-                    "Raw Bird Drumstick",
-                    "Raw Bird Thigh",
-                    "Raw Whole Bird"
-                ],
-                "quantity": 1
-            }
+            "Raw Meat/Raw Prime Meat/Raw Gourmet Meat/Raw Bird Drumstick/Raw Bird Thigh/Raw Whole Bird"
         ]
     },
     {
         "name": "Fish Skewer",
         "ingredients": [
-            {
-                "name": [
-                    "Hyrule Bass",
-                    "Hearty Bass",
-                    "Staminoka Bass",
-                    "Hylian Pike",
-                    "Mighty Carp",
-                    "Armored Carp",
-                    "Sanke Carp"
-                ],
-                "quantity": 1
-            }
+            "Hyrule Bass/Hearty Bass/Staminoka Bass/Hylian Pike/Mighty Carp/Armored Carp/Sanke Carp"
         ]
     },
     {
         "name": "Meat and Mushroom Skewer",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Meat",
-                    "Raw Prime Meat",
-                    "Raw Gourmet Meat"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Shroom",
-                    "Stamella Shroom",
-                    "Chillshroom",
-                    "Sunshroom",
-                    "Rushroom",
-                    "Razorshroom",
-                    "Ironshroom",
-                    "Silent Shroom"
-                ],
-                "quantity": 1
-            }
+            "Raw Meat/Raw Prime Meat/Raw Gourmet Meat",
+            "Hylian Shroom/Stamella Shroom/Chillshroom/Sunshroom/Rushroom/Razorshroom/Ironshroom/Silent Shroom"
         ]
     },
     {
         "name": "Salt-Grilled Meat",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Meat",
-                    "Raw Bird Drumstick"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Rock Salt"
-                ],
-                "quantity": 1
-            }
+            "Raw Meat/Raw Bird Drumstick",
+            "Rock Salt"
         ]
     },
     {
         "name": "Salt-Grilled Prime Meat",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Prime Meat",
-                    "Raw Bird Thigh"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Rock Salt"
-                ],
-                "quantity": 1
-            }
+            "Raw Prime Meat/Raw Bird Thigh",
+            "Rock Salt"
         ]
     },
     {
-        "name": "Salt-Grilled Gourmet",
+        "name": "Salt-Grilled Gourmet Meat",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Gourmet Meat",
-                    "Raw Whole Bird"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Rock Salt"
-                ],
-                "quantity": 1
-            }
+            "Raw Gourmet Meat/Raw Whole Bird",
+            "Rock Salt"
         ]
     },
     {
         "name": "Salt-Grilled Fish",
         "ingredients": [
-            {
-                "name": [
-                    "Hyrule Bass",
-                    "Hearty Bass",
-                    "Staminoka Bass",
-                    "Hylian Pike",
-                    "Mighty Carp",
-                    "Armored Carp",
-                    "Sanke Carp"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Rock Salt"
-                ],
-                "quantity": 1
-            }
+            "Hyrule Bass/Hearty Bass/Staminoka Bass/Hylian Pike/Mighty Carp/Armored Carp/Sanke Carp",
+            "Rock Salt"
         ]
     },
     {
         "name": "Honey Candy",
         "ingredients": [
-            {
-                "name": [
-                    "Courser Bee Honey"
-                ],
-                "quantity": 1
-            }
-        ]
-    },
-    {
-        "name": "Fruitcake",
-        "ingredients": [
-            {
-                "name": [
-                    "Wildberry",
-                    "Apple"
-                ],
-                "quantity": 1,
-                "distinct": true
-            },
-            {
-                "name": [
-                    "Cane Sugar"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Tabantha Wheat"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Palm Fruit",
-                    "Voltfruit",
-                    "Hydromelon",
-                    "Mighty Banana",
-                    "Wildberry",
-                    "Apple"
-                ],
-                "quantity": 1
-            }
+            "Courser Bee Honey"
         ]
     },
     {
         "name": "Meat Pie",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Meat"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Cane Sugar"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goat Butter"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Tabantha Wheat"
-                ],
-                "quantity": 1
-            }
+            "Raw Meat",
+            "Cane Sugar",
+            "Goat Butter",
+            "Tabantha Wheat"
         ]
     },
     {
         "name": "Egg Tart",
         "ingredients": [
-            {
-                "name": [
-                    "Bird Egg"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Cane Sugar"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goat Butter"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Tabantha Wheat"
-                ],
-                "quantity": 1
-            }
+            "Bird Egg",
+            "Cane Sugar",
+            "Goat Butter",
+            "Tabantha Wheat"
         ]
     },
     {
         "name": "Monster Cake",
         "ingredients": [
-            {
-                "name": [
-                    "Monster Extract"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Cane Sugar"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goat Butter"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Tabantha Wheat"
-                ],
-                "quantity": 1
-            }
+            "Monster Extract",
+            "Cane Sugar",
+            "Goat Butter",
+            "Tabantha Wheat"
         ]
     },
     {
         "name": "Seafood Meuniere",
         "ingredients": [
-            {
-                "name": [
-                    "Hyrule Bass",
-                    "Hearty Bass",
-                    "Staminoka Bass",
-                    "Mighty Carp",
-                    "Armored Carp",
-                    "Sanke Carp",
-                    "Hearty Blueshell Snail",
-                    "Sneaky River Snail",
-                    "Bright-Eyed Crab",
-                    "Chillfin Trout",
-                    "Ironshell Crab",
-                    "Razorclaw Crab",
-                    "Sizzlefin Trout",
-                    "Voltfin Trout"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goat Butter"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Tabantha Wheat"
-                ],
-                "quantity": 1
-            }
+            "Hyrule Bass/Hearty Bass/Staminoka Bass/Mighty Carp/Armored Carp/Sanke Carp/Hearty Blueshell Snail/Sneaky River Snail/Bright-Eyed Crab/Chillfin Trout/Ironshell Crab/Razorclaw Crab/Sizzlefin Trout/Voltfin Trout",
+            "Goat Butter",
+            "Tabantha Wheat"
         ]
     },
     {
         "name": "Fish Pie",
         "ingredients": [
-            {
-                "name": [
-                    "Hyrule Bass",
-                    "Hearty Bass",
-                    "Staminoka Bass",
-                    "Mighty Carp",
-                    "Armored Carp",
-                    "Sanke Carp",
-                    "Armored Porgy",
-                    "Mighty Porgy",
-                    "Hearty Blueshell Snail",
-                    "Sneaky River Snail",
-                    "Hearty Salmon",
-                    "Bright-Eyed Crab",
-                    "Chillfin Trout",
-                    "Ironshell Crab",
-                    "Razorclaw Crab",
-                    "Sizzlefin Trout",
-                    "Voltfin Trout"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Rock Salt"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goat Butter"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Tabantha Wheat"
-                ],
-                "quantity": 1
-            }
+            "Hyrule Bass/Hearty Bass/Staminoka Bass/Mighty Carp/Armored Carp/Sanke Carp/Armored Porgy/Mighty Porgy/Hearty Blueshell Snail/Sneaky River Snail/Hearty Salmon/Bright-Eyed Crab/Chillfin Trout/Ironshell Crab/Razorclaw Crab/Sizzlefin Trout/Voltfin Trout",
+            "Rock Salt",
+            "Goat Butter",
+            "Tabantha Wheat"
         ]
     },
     {
         "name": "Vegetable Omelet",
         "ingredients": [
-            {
-                "name": [
-                    "Swift Carrot",
-                    "Endura Carrot",
-                    "Hearty Radish",
-                    "Big Hearty Radish",
-                    "Hyrule Herb",
-                    "Fortified Pumpkin"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Bird Egg"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goat Butter"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Rock Salt"
-                ],
-                "quantity": 1
-            }
+            "Swift Carrot/Endura Carrot/Hearty Radish/Big Hearty Radish/Hyrule Herb/Fortified Pumpkin",
+            "Bird Egg",
+            "Goat Butter",
+            "Rock Salt"
         ]
     },
     {
         "name": "Spicy Meat and Seafood Fry",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Meat"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hyrule Bass"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Spicy Pepper"
-                ],
-                "quantity": 1
-            }
+            "Raw Meat",
+            "Hyrule Bass",
+            "Spicy Pepper"
         ]
     },
     {
         "name": "Vegetable Curry",
         "ingredients": [
-            {
-                "name": [
-                    "Swift Carrot",
-                    "Endura Carrot",
-                    "Fortified Pumpkin"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goron Spice"
-                ],
-                "quantity": 1
-            }
+            "Swift Carrot/Endura Carrot/Fortified Pumpkin",
+            "Hylian Rice",
+            "Goron Spice"
         ]
     },
     {
         "name": "Curry Rice",
         "ingredients": [
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goron Spice"
-                ],
-                "quantity": 1
-            }
+            "Hylian Rice",
+            "Goron Spice"
         ]
     },
     {
         "name": "Creamy Meat Soup",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Meat",
-                    "Raw Prime Meat",
-                    "Raw Gourmet Meat"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Swift Carrot",
-                    "Endura Carrot",
-                    "Hearty Radish",
-                    "Big Hearty Radish",
-                    "Hyrule Herb",
-                    "Fortified Pumpkin"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Rock Salt"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Fresh Milk"
-                ],
-                "quantity": 1
-            }
+            "Raw Meat/Raw Prime Meat/Raw Gourmet Meat",
+            "Swift Carrot/Endura Carrot/Hearty Radish/Big Hearty Radish/Hyrule Herb/Fortified Pumpkin",
+            "Rock Salt",
+            "Fresh Milk"
         ]
     },
     {
         "name": "Creamy Seafood Soup",
         "ingredients": [
-            {
-                "name": [
-                    "Swift Carrot",
-                    "Endura Carrot",
-                    "Hearty Radish",
-                    "Big Hearty Radish",
-                    "Hyrule Herb",
-                    "Fortified Pumpkin"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hyrule Bass",
-                    "Hearty Bass",
-                    "Staminoka Bass",
-                    "Mighty Carp",
-                    "Armored Carp",
-                    "Sanke Carp",
-                    "Armored Porgy",
-                    "Mighty Porgy",
-                    "Hearty Blueshell Snail",
-                    "Sneaky River Snail",
-                    "Hearty Salmon",
-                    "Bright-Eyed Crab",
-                    "Chillfin Trout",
-                    "Ironshell Crab",
-                    "Razorclaw Crab",
-                    "Sizzlefin Trout",
-                    "Voltfin Trout"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Rock Salt"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Fresh Milk"
-                ],
-                "quantity": 1
-            }
+            "Swift Carrot/Endura Carrot/Hearty Radish/Big Hearty Radish/Hyrule Herb/Fortified Pumpkin",
+            "Hyrule Bass/Hearty Bass/Staminoka Bass/Mighty Carp/Armored Carp/Sanke Carp/Armored Porgy/Mighty Porgy/Hearty Blueshell Snail/Sneaky River Snail/Hearty Salmon/Bright-Eyed Crab/Chillfin Trout/Ironshell Crab/Razorclaw Crab/Sizzlefin Trout/Voltfin Trout",
+            "Rock Salt",
+            "Fresh Milk"
         ]
     },
     {
         "name": "Glazed Mushrooms",
         "ingredients": [
-            {
-                "name": [
-                    "Hylian Shroom",
-                    "Stamella Shroom",
-                    "Chillshroom",
-                    "Sunshroom",
-                    "Rushroom",
-                    "Razorshroom",
-                    "Ironshroom",
-                    "Silent Shroom",
-                    "Zapshroom"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Courser Bee Honey"
-                ],
-                "quantity": 1
-            }
+            "Hylian Shroom/Stamella Shroom/Chillshroom/Sunshroom/Rushroom/Razorshroom/Ironshroom/Silent Shroom/Zapshroom",
+            "Courser Bee Honey"
         ]
     },
     {
         "name": "Glazed Meat",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Meat",
-                    "Raw Prime Meat",
-                    "Raw Gourmet Meat"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Courser Bee Honey"
-                ],
-                "quantity": 1
-            }
+            "Raw Meat/Raw Prime Meat/Raw Gourmet Meat",
+            "Courser Bee Honey"
         ]
     },
     {
         "name": "Glazed Seafood",
         "ingredients": [
-            {
-                "name": [
-                    "Hyrule Bass",
-                    "Hearty Bass",
-                    "Staminoka Bass",
-                    "Mighty Carp",
-                    "Armored Carp",
-                    "Sanke Carp",
-                    "Armored Porgy",
-                    "Mighty Porgy",
-                    "Hearty Blueshell Snail",
-                    "Sneaky River Snail",
-                    "Hearty Salmon",
-                    "Bright-Eyed Crab",
-                    "Chillfin Trout",
-                    "Ironshell Crab",
-                    "Razorclaw Crab",
-                    "Sizzlefin Trout",
-                    "Voltfin Trout"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Courser Bee Honey"
-                ],
-                "quantity": 1
-            }
+            "Hyrule Bass/Hearty Bass/Staminoka Bass/Mighty Carp/Armored Carp/Sanke Carp/Armored Porgy/Mighty Porgy/Hearty Blueshell Snail/Sneaky River Snail/Hearty Salmon/Bright-Eyed Crab/Chillfin Trout/Ironshell Crab/Razorclaw Crab/Sizzlefin Trout/Voltfin Trout",
+            "Courser Bee Honey"
         ]
     },
     {
         "name": "Fruit and Mushroom Mix",
         "ingredients": [
-            {
-                "name": [
-                    "Apple",
-                    "Voltfruit",
-                    "Wildberry",
-                    "Palm Fruit",
-                    "Hydromelon"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Shroom",
-                    "Stamella Shroom",
-                    "Chillshroom",
-                    "Sunshroom",
-                    "Rushroom",
-                    "Razorshroom",
-                    "Ironshroom",
-                    "Silent Shroom",
-                    "Zapshroom"
-                ],
-                "quantity": 1
-            }
+            "Apple/Voltfruit/Wildberry/Palm Fruit/Hydromelon",
+            "Hylian Shroom/Stamella Shroom/Chillshroom/Sunshroom/Rushroom/Razorshroom/Ironshroom/Silent Shroom/Zapshroom"
         ]
     },
     {
         "name": "Meat and Seafood Fry",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Meat",
-                    "Raw Bird Drumstick"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hyrule Bass",
-                    "Hearty Bass",
-                    "Staminoka Bass",
-                    "Mighty Carp",
-                    "Armored Carp",
-                    "Sanke Carp",
-                    "Armored Porgy",
-                    "Mighty Porgy",
-                    "Hearty Blueshell Snail",
-                    "Sneaky River Snail",
-                    "Hearty Salmon",
-                    "Bright-Eyed Crab",
-                    "Chillfin Trout",
-                    "Ironshell Crab",
-                    "Razorclaw Crab",
-                    "Sizzlefin Trout",
-                    "Voltfin Trout"
-                ],
-                "quantity": 1
-            }
+            "Raw Meat/Raw Bird Drumstick",
+            "Hyrule Bass/Hearty Bass/Staminoka Bass/Mighty Carp/Armored Carp/Sanke Carp/Armored Porgy/Mighty Porgy/Hearty Blueshell Snail/Sneaky River Snail/Hearty Salmon/Bright-Eyed Crab/Chillfin Trout/Ironshell Crab/Razorclaw Crab/Sizzlefin Trout/Voltfin Trout"
         ]
     },
     {
         "name": "Prime Meat and Seafood Fry",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Prime Meat",
-                    "Raw Bird Thigh"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hyrule Bass",
-                    "Hearty Bass",
-                    "Staminoka Bass",
-                    "Mighty Carp",
-                    "Armored Carp",
-                    "Sanke Carp",
-                    "Armored Porgy",
-                    "Mighty Porgy",
-                    "Hearty Blueshell Snail",
-                    "Sneaky River Snail",
-                    "Hearty Salmon",
-                    "Bright-Eyed Crab",
-                    "Chillfin Trout",
-                    "Ironshell Crab",
-                    "Razorclaw Crab",
-                    "Sizzlefin Trout",
-                    "Voltfin Trout"
-                ],
-                "quantity": 1
-            }
+            "Raw Prime Meat/Raw Bird Thigh",
+            "Hyrule Bass/Hearty Bass/Staminoka Bass/Mighty Carp/Armored Carp/Sanke Carp/Armored Porgy/Mighty Porgy/Hearty Blueshell Snail/Sneaky River Snail/Hearty Salmon/Bright-Eyed Crab/Chillfin Trout/Ironshell Crab/Razorclaw Crab/Sizzlefin Trout/Voltfin Trout"
         ]
     },
     {
         "name": "Gourmet Meat and Seafood Fry",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Gourmet Meat",
-                    "Raw Whole Bird"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hyrule Bass",
-                    "Hearty Bass",
-                    "Staminoka Bass",
-                    "Mighty Carp",
-                    "Armored Carp",
-                    "Sanke Carp",
-                    "Armored Porgy",
-                    "Mighty Porgy",
-                    "Hearty Blueshell Snail",
-                    "Sneaky River Snail",
-                    "Hearty Salmon",
-                    "Bright-Eyed Crab",
-                    "Chillfin Trout",
-                    "Ironshell Crab",
-                    "Razorclaw Crab",
-                    "Sizzlefin Trout",
-                    "Voltfin Trout"
-                ],
-                "quantity": 1
-            }
+            "Raw Gourmet Meat/Raw Whole Bird",
+            "Hyrule Bass/Hearty Bass/Staminoka Bass/Mighty Carp/Armored Carp/Sanke Carp/Armored Porgy/Mighty Porgy/Hearty Blueshell Snail/Sneaky River Snail/Hearty Salmon/Bright-Eyed Crab/Chillfin Trout/Ironshell Crab/Razorclaw Crab/Sizzlefin Trout/Voltfin Trout"
         ]
     },
     {
         "name": "Seafood Curry",
         "ingredients": [
-            {
-                "name": [
-                    "Armored Porgy",
-                    "Mighty Porgy",
-                    "Hearty Blueshell Snail",
-                    "Sneaky River Snail"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goron Spice"
-                ],
-                "quantity": 1
-            }
+            "Armored Porgy/Mighty Porgy/Hearty Blueshell Snail/Sneaky River Snail",
+            "Hylian Rice",
+            "Goron Spice"
         ]
     },
     {
         "name": "Seafood Rice Balls",
         "ingredients": [
-            {
-                "name": [
-                    "Hyrule Bass",
-                    "Hearty Bass",
-                    "Staminoka Bass",
-                    "Mighty Carp",
-                    "Armored Carp",
-                    "Sanke Carp",
-                    "Armored Porgy",
-                    "Mighty Porgy",
-                    "Hearty Salmon",
-                    "Chillfin Trout",
-                    "Sizzlefin Trout",
-                    "Voltfin Trout"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            }
+            "Hyrule Bass/Hearty Bass/Staminoka Bass/Mighty Carp/Armored Carp/Sanke Carp/Armored Porgy/Mighty Porgy/Hearty Salmon/Chillfin Trout/Sizzlefin Trout/Voltfin Trout",
+            "Hylian Rice"
         ]
     },
     {
         "name": "Salt-Grilled Mushrooms",
         "ingredients": [
-            {
-                "name": [
-                    "Hylian Shroom",
-                    "Stamella Shroom",
-                    "Chillshroom",
-                    "Sunshroom",
-                    "Rushroom",
-                    "Razorshroom",
-                    "Ironshroom",
-                    "Silent Shroom",
-                    "Zapshroom"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Rock Salt"
-                ],
-                "quantity": 1
-            }
+            "Hylian Shroom/Stamella Shroom/Chillshroom/Sunshroom/Rushroom/Razorshroom/Ironshroom/Silent Shroom/Zapshroom",
+            "Rock Salt"
         ]
     },
     {
         "name": "Salt-Grilled Greens",
         "ingredients": [
-            {
-                "name": [
-                    "Swift Carrot",
-                    "Endura Carrot",
-                    "Hearty Radish",
-                    "Big Hearty Radish",
-                    "Hyrule Herb",
-                    "Fortified Pumpkin"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Rock Salt"
-                ],
-                "quantity": 1
-            }
+            "Swift Carrot/Endura Carrot/Hearty Radish/Big Hearty Radish/Hyrule Herb/Fortified Pumpkin",
+            "Rock Salt"
         ]
     },
     {
         "name": "Fried Wild Greens",
         "ingredients": [
-            {
-                "name": [
-                    "Swift Carrot",
-                    "Endura Carrot",
-                    "Hearty Radish",
-                    "Big Hearty Radish",
-                    "Hyrule Herb",
-                    "Fortified Pumpkin"
-                ],
-                "quantity": 1
-            }
+            "Swift Carrot/Endura Carrot/Hearty Radish/Big Hearty Radish/Hyrule Herb/Fortified Pumpkin"
         ]
     },
     {
         "name": "Mushroom Risotto",
         "ingredients": [
-            {
-                "name": [
-                    "Hylian Shroom",
-                    "Stamella Shroom",
-                    "Chillshroom",
-                    "Sunshroom",
-                    "Rushroom",
-                    "Razorshroom",
-                    "Ironshroom",
-                    "Silent Shroom",
-                    "Zapshroom"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goat Butter"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Rock Salt"
-                ],
-                "quantity": 1
-            }
+            "Hylian Shroom/Stamella Shroom/Chillshroom/Sunshroom/Rushroom/Razorshroom/Ironshroom/Silent Shroom/Zapshroom",
+            "Hylian Rice",
+            "Goat Butter",
+            "Rock Salt"
         ]
     },
     {
         "name": "Vegetable Risotto",
         "ingredients": [
-            {
-                "name": [
-                    "Swift Carrot",
-                    "Endura Carrot",
-                    "Fortified Pumpkin"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goat Butter"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Rock Salt"
-                ],
-                "quantity": 1
-            }
+            "Swift Carrot/Endura Carrot/Fortified Pumpkin",
+            "Hylian Rice",
+            "Goat Butter",
+            "Rock Salt"
         ]
     },
     {
         "name": "Salmon Risotto",
         "ingredients": [
-            {
-                "name": [
-                    "Hearty Salmon"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goat Butter"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Rock Salt"
-                ],
-                "quantity": 1
-            }
+            "Hearty Salmon",
+            "Hylian Rice",
+            "Goat Butter",
+            "Rock Salt"
         ]
     },
     {
         "name": "Crab Risotto",
         "ingredients": [
-            {
-                "name": [
-                    "Ironshell Crab",
-                    "Razorclaw Crab",
-                    "Bright-Eyed Crab"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goat Butter"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Rock Salt"
-                ],
-                "quantity": 1
-            }
+            "Ironshell Crab/Razorclaw Crab/Bright-Eyed Crab",
+            "Hylian Rice",
+            "Goat Butter",
+            "Rock Salt"
         ]
     },
     {
         "name": "Creamy Heart Soup",
         "ingredients": [
-            {
-                "name": [
-                    "Hydromelon"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hearty Radish",
-                    "Big Hearty Radish"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "VoltFuit"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Fresh Milk"
-                ],
-                "quantity": 1
-            }
+            "Hydromelon",
+            "Hearty Radish/Big Hearty Radish",
+            "Voltfruit",
+            "Fresh Milk"
         ]
     },
     {
         "name": "Cream of Mushroom Soup",
         "ingredients": [
-            {
-                "name": [
-                    "Hylian Shroom",
-                    "Stamella Shroom",
-                    "Chillshroom",
-                    "Sunshroom",
-                    "Rushroom",
-                    "Razorshroom",
-                    "Ironshroom",
-                    "Silent Shroom",
-                    "Zapshroom"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Swift Carrot",
-                    "Endura Carrot",
-                    "Hearty Radish",
-                    "Big Hearty Radish",
-                    "Hyrule Herb",
-                    "Fortified Pumpkin"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Rock Salt"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Fresh Milk"
-                ],
-                "quantity": 1
-            }
+            "Hylian Shroom/Stamella Shroom/Chillshroom/Sunshroom/Rushroom/Razorshroom/Ironshroom/Silent Shroom/Zapshroom",
+            "Swift Carrot/Endura Carrot/Hearty Radish/Big Hearty Radish/Hyrule Herb/Fortified Pumpkin",
+            "Rock Salt",
+            "Fresh Milk"
         ]
     },
     {
         "name": "Cream of Vegetable Soup",
         "ingredients": [
-            {
-                "name": [
-                    "Swift Carrot",
-                    "Endura Carrot",
-                    "Hearty Radish",
-                    "Big Hearty Radish",
-                    "Hyrule Herb",
-                    "Fortified Pumpkin"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Rock Salt"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Fresh Milk"
-                ],
-                "quantity": 1
-            }
+            "Swift Carrot/Endura Carrot/Hearty Radish/Big Hearty Radish/Hyrule Herb/Fortified Pumpkin",
+            "Rock Salt",
+            "Fresh Milk"
         ]
     },
     {
         "name": "Veggie Cream Soup",
         "ingredients": [
-            {
-                "name": [
-                    "Swift Carrot",
-                    "Endura Carrot",
-                    "Fortified Pumpkin"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Rock Salt"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Fresh Milk"
-                ],
-                "quantity": 1
-            }
+            "Swift Carrot/Endura Carrot/Fortified Pumpkin",
+            "Rock Salt",
+            "Fresh Milk"
         ]
     },
     {
         "name": "Pumpkin Stew",
         "ingredients": [
-            {
-                "name": [
-                    "Fortified Pumpkin"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Tabantha Wheat"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goat Butter"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Fresh Milk"
-                ],
-                "quantity": 1
-            }
+            "Fortified Pumpkin",
+            "Tabantha Wheat",
+            "Goat Butter",
+            "Fresh Milk"
         ]
     },
     {
         "name": "Carrot Stew",
         "ingredients": [
-            {
-                "name": [
-                    "Swift Carrot",
-                    "Endura Carrot"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Tabantha Wheat"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goat Butter"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Fresh Milk"
-                ],
-                "quantity": 1
-            }
+            "Swift Carrot/Endura Carrot",
+            "Tabantha Wheat",
+            "Goat Butter",
+            "Fresh Milk"
         ]
     },
     {
         "name": "Curry Pilaf",
         "ingredients": [
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goron Spice"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goat Butter"
-                ],
-                "quantity": 1
-            }
+            "Hylian Rice",
+            "Goron Spice",
+            "Goat Butter"
         ]
     },
     {
         "name": "Fried Egg and Rice",
         "ingredients": [
-            {
-                "name": [
-                    "Bird Egg"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            }
+            "Bird Egg",
+            "Hylian Rice"
         ]
     },
     {
         "name": "Veggie Rice Balls",
         "ingredients": [
-            {
-                "name": [
-                    "Swift Carrot",
-                    "Endura Carrot",
-                    "Hearty Radish",
-                    "Big Hearty Radish",
-                    "Hyrule Herb",
-                    "Fortified Pumpkin"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            }
+            "Swift Carrot/Endura Carrot/Fortified Pumpkin/Hearty Radish/Big Hearty Radish/Hyrule Herb",
+            "Hylian Rice"
         ]
     },
     {
         "name": "Mushroom Rice Balls",
         "ingredients": [
-            {
-                "name": [
-                    "Hylian Shroom",
-                    "Stamella Shroom",
-                    "Chillshroom",
-                    "Sunshroom",
-                    "Rushroom",
-                    "Razorshroom",
-                    "Ironshroom",
-                    "Silent Shroom",
-                    "Zapshroom"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            }
+            "Hylian Shroom/Stamella Shroom/Chillshroom/Sunshroom/Rushroom/Razorshroom/Ironshroom/Silent Shroom/Zapshroom",
+            "Hylian Rice"
         ]
     },
     {
         "name": "Omelette",
         "ingredients": [
-            {
-                "name": [
-                    "Bird Egg"
-                ],
-                "quantity": 1
-            }
+            "Bird Egg"
         ]
     },
     {
         "name": "Mushroom Omelette",
         "ingredients": [
-            {
-                "name": [
-                    "Bird Egg"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Shroom",
-                    "Stamella Shroom",
-                    "Chillshroom",
-                    "Sunshroom",
-                    "Rushroom",
-                    "Razorshroom",
-                    "Ironshroom",
-                    "Silent Shroom",
-                    "Zapshroom"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goat Butter"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Rock Salt"
-                ],
-                "quantity": 1
-            }
+            "Bird Egg",
+            "Hylian Shroom/Stamella Shroom/Chillshroom/Sunshroom/Rushroom/Razorshroom/Ironshroom/Silent Shroom/Zapshroom",
+            "Goat Butter",
+            "Rock Salt"
         ]
     },
     {
         "name": "Herb Saute",
         "ingredients": [
-            {
-                "name": [
-                    "Swift Carrot",
-                    "Endura Carrot",
-                    "Hearty Radish",
-                    "Big Hearty Radish",
-                    "Hyrule Herb",
-                    "Fortified Pumpkin"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goron Spice"
-                ],
-                "quantity": 1
-            }
-        ]
-    },
-    {
-        "name": "Copious Fried Wild Greens",
-        "ingredients": [
-            {
-                "name": [
-                    "Swift Carrot",
-                    "Endura Carrot",
-                    "Hearty Radish",
-                    "Big Hearty Radish",
-                    "Hyrule Herb",
-                    "Fortified Pumpkin"
-                ],
-                "quantity": 1,
-                "distinct": true,
-                "count": 4
-            }
+            "Swift Carrot/Endura Carrot/Hearty Radish/Big Hearty Radish/Hyrule Herb/Fortified Pumpkin",
+            "Goron Spice"
         ]
     },
     {
         "name": "Fragrant Mushroom Saute",
         "ingredients": [
-            {
-                "name": [
-                    "Hylian Shroom",
-                    "Stamella Shroom",
-                    "Chillshroom",
-                    "Sunshroom",
-                    "Rushroom",
-                    "Razorshroom",
-                    "Ironshroom",
-                    "Silent Shroom",
-                    "Zapshroom"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goron Spice"
-                ],
-                "quantity": 1
-            }
-        ]
-    },
-    {
-        "name": "Copious Mushroom Skewers",
-        "ingredients": [
-            {
-                "name": [
-                    "Hylian Shroom",
-                    "Stamella Shroom",
-                    "Chillshroom",
-                    "Sunshroom",
-                    "Rushroom",
-                    "Razorshroom",
-                    "Ironshroom",
-                    "Silent Shroom",
-                    "Zapshroom"
-                ],
-                "quantity": 1,
-                "distinct": true,
-                "count": 4
-            }
+            "Hylian Shroom/Stamella Shroom/Chillshroom/Sunshroom/Rushroom/Razorshroom/Ironshroom/Silent Shroom/Zapshroom",
+            "Goron Spice"
         ]
     },
     {
         "name": "Clam Chowder",
         "ingredients": [
-            {
-                "name": [
-                    "Hearty Blueshell Snail"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Tabantha Wheat"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goat Butter"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Fresh Milk"
-                ],
-                "quantity": 1
-            }
+            "Hearty Blueshell Snail",
+            "Tabantha Wheat",
+            "Goat Butter",
+            "Fresh Milk"
         ]
     },
     {
         "name": "Seafood Fried Rice",
         "ingredients": [
-            {
-                "name": [
-                    "Armored Porgy",
-                    "Mighty Porgy",
-                    "Hearty Blueshell Snail"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Rock Salt"
-                ],
-                "quantity": 1
-            }
+            "Armored Porgy/Mighty Porgy/Hearty Blueshell Snail",
+            "Hylian Rice",
+            "Rock Salt"
         ]
     },
     {
         "name": "Seafood Paella",
         "ingredients": [
-            {
-                "name": [
-                    "Armored Porgy",
-                    "Mighty Porgy",
-                    "Hearty Blueshell Snail"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goat Butter"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Rock Salt"
-                ],
-                "quantity": 1
-            }
+            "Armored Porgy/Mighty Porgy/Hearty Blueshell Snail",
+            "Hylian Rice",
+            "Goat Butter",
+            "Rock Salt"
         ]
     },
     {
         "name": "Crab Omelette with Rice",
         "ingredients": [
-            {
-                "name": [
-                    "Bird Egg"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Ironshell Crab",
-                    "Razorclaw Crab",
-                    "Bright-Eyed Crab"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Rock Salt"
-                ],
-                "quantity": 1
-            }
+            "Bird Egg",
+            "Ironshell Crab/Razorclaw Crab/Bright-Eyed Crab",
+            "Hylian Rice",
+            "Rock Salt"
         ]
     },
     {
         "name": "Salmon Meuniere",
         "ingredients": [
-            {
-                "name": [
-                    "Hearty Salmon"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goat Butter"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Tabantha Wheat"
-                ],
-                "quantity": 1
-            }
+            "Hearty Salmon",
+            "Goat Butter",
+            "Tabantha Wheat"
         ]
     },
     {
         "name": "Porgy Meuniere",
         "ingredients": [
-            {
-                "name": [
-                    "Armored Porgy",
-                    "Mighty Porgy"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goat Butter"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Tabantha Wheat"
-                ],
-                "quantity": 1
-            }
+            "Armored Porgy/Mighty Porgy",
+            "Goat Butter",
+            "Tabantha Wheat"
         ]
     },
     {
         "name": "Spicy Peppered Seafood",
         "ingredients": [
-            {
-                "name": [
-                    "Hyrule Bass",
-                    "Hearty Bass",
-                    "Staminoka Bass",
-                    "Mighty Carp",
-                    "Armored Carp",
-                    "Sanke Carp",
-                    "Armored Porgy",
-                    "Mighty Porgy",
-                    "Hearty Blueshell Snail",
-                    "Sneaky River Snail",
-                    "Hearty Salmon",
-                    "Bright-Eyed Crab",
-                    "Chillfin Trout",
-                    "Ironshell Crab",
-                    "Razorclaw Crab",
-                    "Sizzlefin Trout",
-                    "Voltfin Trout"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Spicy Pepper"
-                ],
-                "quantity": 1
-            }
+            "Hyrule Bass/Hearty Bass/Staminoka Bass/Mighty Carp/Armored Carp/Sanke Carp/Armored Porgy/Mighty Porgy/Hearty Blueshell Snail/Sneaky River Snail/Hearty Salmon/Bright-Eyed Crab/Chillfin Trout/Ironshell Crab/Razorclaw Crab/Sizzlefin Trout/Voltfin Trout",
+            "Spicy Pepper"
         ]
     },
     {
         "name": "Crab Stir-Fry",
         "ingredients": [
-            {
-                "name": [
-                    "Ironshell Crab",
-                    "Razorclaw Crab",
-                    "Bright-Eyed Crab"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goron Spice"
-                ],
-                "quantity": 1
-            }
+            "Ironshell Crab/Razorclaw Crab/Bright-Eyed Crab",
+            "Goron Spice"
         ]
     },
     {
         "name": "Salt-Grilled Crab",
         "ingredients": [
-            {
-                "name": [
-                    "Ironshell Crab",
-                    "Razorclaw Crab",
-                    "Bright-Eyed Crab"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Rock Salt"
-                ],
-                "quantity": 1
-            }
+            "Ironshell Crab/Razorclaw Crab/Bright-Eyed Crab",
+            "Rock Salt"
         ]
     },
     {
         "name": "Steamed Fish",
         "ingredients": [
-            {
-                "name": [
-                    "Hyrule Bass",
-                    "Hearty Bass",
-                    "Staminoka Bass",
-                    "Mighty Carp",
-                    "Armored Carp",
-                    "Sanke Carp",
-                    "Armored Porgy",
-                    "Mighty Porgy",
-                    "Hearty Salmon",
-                    "Chillfin Trout",
-                    "Sizzlefin Trout",
-                    "Voltfin Trout"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Swift Carrot",
-                    "Endura Carrot",
-                    "Hearty Radish",
-                    "Big Hearty Radish",
-                    "Hyrule Herb",
-                    "Fortified Pumpkin"
-                ],
-                "quantity": 1
-            }
+            "Hyrule Bass/Hearty Bass/Staminoka Bass/Mighty Carp/Armored Carp/Sanke Carp/Armored Porgy/Mighty Porgy/Hearty Salmon/Bright-Eyed Crab/Chillfin Trout/Sizzlefin Trout/Voltfin Trout",
+            "Swift Carrot/Endura Carrot/Hearty Radish/Big Hearty Radish/Hyrule Herb/Fortified Pumpkin"
         ]
     },
     {
         "name": "Seafood Skewer",
         "ingredients": [
-            {
-                "name": [
-                    "Hearty Blueshell Snail",
-                    "Sneaky River Snail",
-                    "Bright-Eyed Crab",
-                    "Ironshell Crab",
-                    "Razorclaw Crab"
-                ],
-                "quantity": 1
-            }
-        ]
-    },
-    {
-        "name": "Copious Fish Skewer",
-        "ingredients": [
-            {
-                "name": [
-                    "Hyrule Bass",
-                    "Hearty Bass",
-                    "Staminoka Bass",
-                    "Mighty Carp",
-                    "Armored Carp",
-                    "Sanke Carp",
-                    "Armored Porgy",
-                    "Mighty Porgy",
-                    "Hearty Salmon",
-                    "Chillfin Trout",
-                    "Sizzlefin Trout",
-                    "Voltfin Trout"
-                ],
-                "quantity": 1,
-                "distinct": true,
-                "count": 4
-            }
+                    "Hearty Blueshell Snail/Sneaky River Snail/Bright-Eyed Crab/Ironshell Crab/Razorclaw Crab"
         ]
     },
     {
         "name": "Fish and Mushroom Skewer",
         "ingredients": [
-            {
-                "name": [
-                    "Hyrule Bass",
-                    "Hearty Bass",
-                    "Staminoka Bass",
-                    "Mighty Carp",
-                    "Armored Carp",
-                    "Sanke Carp",
-                    "Armored Porgy",
-                    "Mighty Porgy",
-                    "Hearty Salmon",
-                    "Chillfin Trout",
-                    "Sizzlefin Trout",
-                    "Voltfin Trout"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Shroom",
-                    "Stamella Shroom",
-                    "Chillshroom",
-                    "Sunshroom",
-                    "Rushroom",
-                    "Razorshroom",
-                    "Ironshroom",
-                    "Silent Shroom",
-                    "Zapshroom"
-                ],
-                "quantity": 1
-            }
+            "Hyrule Bass/Hearty Bass/Staminoka Bass/Mighty Carp/Armored Carp/Sanke Carp/Armored Porgy/Mighty Porgy/Hearty Salmon/Bright-Eyed Crab/Chillfin Trout/Sizzlefin Trout/Voltfin Trout",
+                    "Hylian Shroom/Stamella Shroom/Chillshroom/Sunshroom/Rushroom/Razorshroom/Ironshroom/Silent Shroom/Zapshroom"
         ]
     },
     {
         "name": "Meat Stew",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Meat",
-                    "Raw Bird Drumstick"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Tabantha Wheat"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goat Butter"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Raw Meat/Raw Bird Drumstick",
+                    "Tabantha Wheat",
+                    "Goat Butter",
                     "Fresh Milk"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Prime Meat Stew",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Prime Meat",
-                    "Raw Bird Thigh"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Tabantha Wheat"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goat Butter"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Raw Prime Meat/Raw Bird Thigh",
+                    "Tabantha Wheat",
+                    "Goat Butter",
                     "Fresh Milk"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Gourmet Meat Stew",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Gourmet Meat",
-                    "Raw Whole Bird"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Tabantha Wheat"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goat Butter"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Raw Gourmet Meat/Raw Whole Bird",
+                    "Tabantha Wheat",
+                    "Goat Butter",
                     "Fresh Milk"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Meat Curry",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Meat"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Raw Meat",
+                    "Hylian Rice",
                     "Goron Spice"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Prime Meat Curry",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Prime Meat"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Raw Prime Meat",
+                    "Hylian Rice",
                     "Goron Spice"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Gourmet Meat Curry",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Gourmet Meat"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Raw Gourmet Meat",
+                    "Hylian Rice",
                     "Goron Spice"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Poultry Curry",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Bird Drumstick"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Raw Bird Drumstick",
+                    "Hylian Rice",
                     "Goron Spice"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Prime Poultry Curry",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Bird Thigh"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Raw Bird Thigh",
+                    "Hylian Rice",
                     "Goron Spice"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Gourmet Poultry Curry",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Whole Bird"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Raw Whole Bird",
+                    "Hylian Rice",
                     "Goron Spice"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Steamed Meat",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Meat",
-                    "Raw Prime Meat",
-                    "Raw Gourmet Meat"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Swift Carrot",
-                    "Endura Carrot",
-                    "Hearty Radish",
-                    "Big Hearty Radish",
-                    "Hyrule Herb",
-                    "Fortified Pumpkin"
-                ],
-                "quantity": 1
-            }
+                    "Raw Meat/Raw Prime Meat/Raw Gourmet Meat",
+                    "Swift Carrot/Endura Carrot/Hearty Radish/Big Hearty Radish/Hyrule Herb/Fortified Pumpkin"
         ]
     },
     {
         "name": "Pepper Steak",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Meat",
-                    "Raw Prime Meat",
-                    "Raw Gourmet Meat"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Raw Meat/Raw Prime Meat/Raw Gourmet Meat",
                     "Spicy Pepper"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Meaty Rice Balls",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Meat",
-                    "Raw Prime Meat",
-                    "Raw Gourmet Meat"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Raw Meat/Raw Prime Meat/Raw Gourmet Meat",
                     "Hylian Rice"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Meat-Stuffed Pumpkins",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Meat",
-                    "Raw Prime Meat",
-                    "Raw Gourmet Meat",
-                    "Raw Bird Drumstick",
-                    "Raw Bird Thigh",
-                    "Raw Whole Bird"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Raw Meat/Raw Prime Meat/Raw Gourmet Meat/Raw Bird Drumstick/Raw Bird Thigh/Raw Whole Bird",
                     "Fortified Pumpkin"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Spiced Meat Skewer",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Meat"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Raw Meat",
                     "Goron Spice"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Prime Spiced Meat Skewer",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Prime Meat"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Raw Prime Meat",
                     "Goron Spice"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Gourmet Spiced Meat Skewer",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Gourmet Meat"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Raw Gourmet Meat",
                     "Goron Spice"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Meat and Rice Bowl",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Meat",
-                    "Raw Bird Drumstick"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Raw Meat/Raw Bird Drumstick",
+                    "Hylian Rice",
                     "Rock Salt"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Prime Meat and Rice Bowl",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Prime Meat",
-                    "Raw Bird Thigh"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Raw Prime Meat/Raw Bird Thigh",
+                    "Hylian Rice",
                     "Rock Salt"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Gourmet Meat and Rice Bowl",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Gourmet Meat",
-                    "Raw Whole Bird"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Raw Gourmet Meat/Raw Whole Bird",
+                    "Hylian Rice",
                     "Rock Salt"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Poultry Pilaf",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Bird Drumstick",
-                    "Raw Bird Thigh",
-                    "Raw Whole Bird"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Bird Egg"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Raw Bird Drumstick/Raw Bird Thigh/Raw Whole Bird",
+                    "Hylian Rice",
+                    "Bird Egg",
                     "Goat Butter"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Prime Poultry Pilaf",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Bird Thigh"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Bird Egg"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Raw Bird Thigh",
+                    "Hylian Rice",
+                    "Bird Egg",
                     "Goat Butter"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Gourmet Poultry Pilaf",
         "ingredients": [
-            {
-                "name": [
-                    "Raw Bird Drumstick",
-                    "Raw Bird Thigh",
-                    "Raw Whole Bird"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Bird Egg"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Raw Whole Bird",
+                    "Hylian Rice",
+                    "Bird Egg",
                     "Goat Butter"
-                ],
-                "quantity": 1
-            }
-        ]
-    },
-    {
-        "name": "Copious Meat Skewers",
-        "ingredients": [
-            {
-                "name": [
-                    "Raw Meat",
-                    "Raw Prime Meat",
-                    "Raw Gourmet Meat",
-                    "Raw Bird Drumstick",
-                    "Raw Bird Thigh",
-                    "Raw Whole Bird"
-                ],
-                "quantity": 1,
-                "distinct": true,
-                "count": 4
-            }
         ]
     },
     {
         "name": "Monster Soup",
         "ingredients": [
-            {
-                "name": [
-                    "Monster Extract"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Tabantha Wheat"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goat Butter"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Monster Extract",
+                    "Tabantha Wheat",
+                    "Goat Butter",
                     "Fresh Milk"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Monster Stew",
         "ingredients": [
-            {
-                "name": [
-                    "Monster Extract"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Raw Meat",
-                    "Raw Prime Meat",
-                    "Raw Gourmet Meat",
-                    "Raw Bird Drumstick",
-                    "Raw Bird Thigh",
-                    "Raw Whole Bird"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hyrule Bass",
-                    "Hearty Bass",
-                    "Staminoka Bass",
-                    "Mighty Carp",
-                    "Armored Carp",
-                    "Sanke Carp",
-                    "Armored Porgy",
-                    "Mighty Porgy",
-                    "Hearty Blueshell Snail",
-                    "Sneaky River Snail",
-                    "Hearty Salmon",
-                    "Bright-Eyed Crab",
-                    "Chillfin Trout",
-                    "Ironshell Crab",
-                    "Razorclaw Crab",
-                    "Sizzlefin Trout",
-                    "Voltfin Trout"
-                ],
-                "quantity": 1
-            }
+                    "Monster Extract",
+                    "Raw Meat/Raw Prime Meat/Raw Gourmet Meat/Raw Bird Drumstick/Raw Bird Thigh/Raw Whole Bird",
+                    "Hyrule Bass/Hearty Bass/Staminoka Bass/Hylian Pike/Mighty Carp/Armored Carp/Sanke Carp/Armored Porgy/Mighty Porgy/Hearty Blueshell Snail/Sneaky River Snail/Hearty Salmon/Bright-Eyed Crab/Chillfin Trout/Ironshell Crab/Razorclaw Crab/Sizzlefin Trout/Voltfin Trout"
         ]
     },
     {
         "name": "Monster Curry",
         "ingredients": [
-            {
-                "name": [
-                    "Monster Extract"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Monster Extract",
+                    "Hylian Rice",
                     "Goron Spice"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Monster Rice Balls",
         "ingredients": [
-            {
-                "name": [
-                    "Monster Extract"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Hylian Rice"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Monster Extract",
+                    "Hylian Rice",
                     "Rock Salt"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Warm Milk",
         "ingredients": [
-            {
-                "name": [
                     "Fresh Milk"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Wheat Bread",
         "ingredients": [
-            {
-                "name": [
-                    "Tabantha Wheat"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Tabantha Wheat",
                     "Rock Salt"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Steamed Fruit",
         "ingredients": [
-            {
-                "name": [
-                    "Apple",
-                    "Voltfruit",
-                    "Wildberry",
-                    "Palm Fruit",
-                    "Hydromelon"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Swift Carrot",
-                    "Endura Carrot",
-                    "Hearty Radish",
-                    "Big Hearty Radish",
-                    "Hyrule Herb",
-                    "Fortified Pumpkin"
-                ],
-                "quantity": 1
-            }
+                    "Apple/Voltfruit/Wildberry/Palm Fruit/Hydromelon",
+                    "Swift Carrot/Endura Carrot/Hearty Radish/Big Hearty Radish/Hyrule Herb/Fortified Pumpkin"
         ]
     },
     {
         "name": "Glazed Veggies",
         "ingredients": [
-            {
-                "name": [
-                    "Swift Carrot",
-                    "Endura Carrot",
-                    "Hearty Radish",
-                    "Big Hearty Radish",
-                    "Hyrule Herb",
-                    "Fortified Pumpkin"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Swift Carrot/Endura Carrot/Hearty Radish/Big Hearty Radish/Hyrule Herb/Fortified Pumpkin",
                     "Courser Bee Honey"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Sauteed Nuts",
         "ingredients": [
-            {
-                "name": [
-                    "Acorn",
-                    "Chickaloo Tree Nut"
-                ],
-                "quantity": 1
-            }
+                    "Acorn/Chickaloo Tree Nut"
         ]
     },
     {
         "name": "Apple Pie",
         "ingredients": [
-            {
-                "name": [
-                    "Apple"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Cane Sugar"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goat Butter"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Apple",
+                    "Cane Sugar",
+                    "Goat Butter",
                     "Tabantha Wheat"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Pumpkin Pie",
         "ingredients": [
-            {
-                "name": [
-                    "Fortified Pumpkin"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Cane Sugar"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goat Butter"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Fortified Pumpkin",
+                    "Cane Sugar",
+                    "Goat Butter",
                     "Tabantha Wheat"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Fruit Pie",
         "ingredients": [
-            {
-                "name": [
-                    "Voltfruit",
-                    "Palm Fruit",
-                    "Wildberry",
-                    "Hydromelon"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Cane Sugar"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goat Butter"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Voltfruit/Palm Fruit/Hydromelon/Wildberry",
+                    "Cane Sugar",
+                    "Goat Butter",
                     "Tabantha Wheat"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Carrot Cake",
         "ingredients": [
-            {
-                "name": [
-                    "Swift Carrot",
-                    "Endura Carrot"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Cane Sugar"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goat Butter"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Swift Carrot/Endura Carrot",
+                    "Cane Sugar",
+                    "Goat Butter",
                     "Tabantha Wheat"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Nutcake",
         "ingredients": [
-            {
-                "name": [
-                    "Acorn",
-                    "Chickaloo Tree Nut"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Cane Sugar"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Goat Butter"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Acorn/Chickaloo Tree Nut",
+                    "Cane Sugar",
+                    "Goat Butter",
                     "Tabantha Wheat"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Plain Crepe",
         "ingredients": [
-            {
-                "name": [
-                    "Bird Egg"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Fresh Milk"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Tabantha Wheat"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Bird Egg",
+                    "Fresh Milk",
+                    "Tabantha Wheat",
                     "Cane Sugar"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Honey Crepe",
         "ingredients": [
-            {
-                "name": [
-                    "Bird Egg"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Fresh Milk"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Courser Bee Honey"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Cane Sugar"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Bird Egg",
+                    "Fresh Milk",
+                    "Courser Bee Honey",
+                    "Cane Sugar",
                     "Tabantha Wheat"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Wildberry Crepe",
         "ingredients": [
-            {
-                "name": [
-                    "Bird Egg"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Fresh Milk"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Wildberry"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Cane Sugar"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Bird Egg",
+                    "Fresh Milk",
+                    "Wildberry",
+                    "Cane Sugar",
                     "Tabantha Wheat"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Egg Pudding",
         "ingredients": [
-            {
-                "name": [
-                    "Bird Egg"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Fresh Milk"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Cane Sugar"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Bird Egg",
+                    "Fresh Milk",
+                    "Cane Sugar",
                     "Goat Butter"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Fried Bananas",
         "ingredients": [
-            {
-                "name": [
-                    "Mighty Banana"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
-                    "Cane Sugar"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Mighty Banana",
+                    "Cane Sugar",
                     "Tabantha Wheat"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Hot Buttered Apple",
         "ingredients": [
-            {
-                "name": [
-                    "Apple"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Apple",
                     "Goat Butter"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Honeyed Apple",
         "ingredients": [
-            {
-                "name": [
-                    "Apple"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Apple",
                     "Courser Bee Honey"
-                ],
-                "quantity": 1
-            }
         ]
     },
     {
         "name": "Honeyed Fruits",
         "ingredients": [
-            {
-                "name": [
-                    "Voltfruit",
-                    "Wildberry",
-                    "Palm Fruit",
-                    "Hydromelon"
-                ],
-                "quantity": 1
-            },
-            {
-                "name": [
+                    "Voltfruit/Wildberry/Palm Fruit/Hydromelon",
                     "Courser Bee Honey"
-                ],
-                "quantity": 1
-            }
         ]
     }
 ]

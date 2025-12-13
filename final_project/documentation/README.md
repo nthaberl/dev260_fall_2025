@@ -1,6 +1,8 @@
 # Project Title
 
-> One-sentence summary of what this app does and who it's for.
+> One-sentence summary of what this app does and who it's for.  
+
+A console app for Breath of the Wild players to view, search, and manage cooking recipes using ingredients they have in their campfire. 
 
 ---
 
@@ -9,24 +11,33 @@
 **Problem this solves:**  
 _Explain the real-world task your app supports and why it's useful (2–4 sentences)._
 
-**Your Answer:**
+**Your Answer:**  
+This app helps players of the Breath of the Wild game easily find and manage cooking recipes.  
+For those familiar with the game, cooking is a major mechanic in the game, however, recipes are hidden throughout the game making it difficult to heal early on.  
+Later in-game users may be nervous to waste rare ingredients trying to craft something useful.  
+Users can use this app as a quick reference to see what they can make with ingredients they have on hand, and for the completionists, track recipes so they can verify if they've been cooked already or not.
 
 **Core features:**  
 _List the main features your application provides (Add, Search, List, Update, Delete, etc.)_
 
 **Your Answer:**
 
--
--
--
--
+- View all recipes alphabetically with ingredient lists
+- Search for recipes by partial or full name match
+- Manage a "campfire", where users can add/remove up to 5 unique ingredients
+- See which recipes can be made with current campfire ingredients
+- Save recipes to a personal recipe cook with "cooked"/"not cooked" status for easy tracking
+- Edit and save cooked status of each recipe saved in the recipebook
 
 ## How to Run
 
 **Requirements:**  
 _List required .NET version, OS requirements, and any dependencies._
 
-**Your Answer:**
+**Your Answer:**  
+- .NET 
+- Compatible with Windows, macOS, or Linux command lines
+- no additional external dependencies
 
 ```bash
 git clone <your-repo-url>
@@ -132,9 +143,8 @@ _Describe each test scenario with steps and expected results._
 _Describe any edge cases not handled, performance caveats, or known issues._
 
 **Your Answer:**
+This app is limited to basic food recipes only, variants on basic recipes and elixirs (which require monster parts) are not included.  
 
--
--
 
 ## Comparers & String Handling
 
@@ -193,6 +203,9 @@ _Highlight the best aspect of your code - maybe your data structure choices, cle
 _Identify areas for potential improvement - perhaps adding more features, optimizing performance, improving error handling, adding data persistence, refactoring for better maintainability, or enhancing the user experience._
 
 **Your Answer:**
+
+This application has a lot of potential! Additional recipes as well as more complex recipes could be added. Unfortunately I had to write most of the JSON file and in its current state it's pretty simple.  
+Every entry would have to be edited and updated to support additional features.
 
 ## Real-World Applications
 
