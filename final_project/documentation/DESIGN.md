@@ -1,5 +1,5 @@
 # Project Design & Rationale
-
+# Incomplete
 **Instructions:** Replace prompts with your content. Be specific and concise. If something doesn't apply, write "N/A" and explain briefly.
 
 ---
@@ -13,14 +13,14 @@ _List your main entities with key fields, identifiers, and relationships (1–2 
 
 **Entity A:**
 
-- Name:
-- Key fields:
-- Identifiers:
-- Relationships:
+- Name: Recipe
+- Key fields: Name (string), Ingredients (List<String>)
+- Identifiers: Name (case-insensitive)
+- Relationships: A Recipe contains multiple ingredient "groups", Recipes are evaluated against the campfire to determine cookability 
 
 **Entity B (if applicable):**
 
-- Name:
+- Name: 
 - Key fields:
 - Identifiers:
 - Relationships:
@@ -28,7 +28,8 @@ _List your main entities with key fields, identifiers, and relationships (1–2 
 **Identifiers (keys) and why they're chosen:**  
 _Explain your choice of keys (e.g., string Id, composite key, case-insensitive, etc.)._
 
-**Your Answer:**
+**Your Answer:**  
+Recipe names are used as identifiers because they are human-readable, unique within the dataset, and meaningful to the user.
 
 ---
 
@@ -41,12 +42,15 @@ _List only the meaningful data structures you chose. For each, state the purpose
 **Chosen Data Structure:**  
 _Name the data structure (e.g., Dictionary<string, Customer>)._
 
-**Your Answer:**
+**Your Answer:**  
+
+List<Recipe>
 
 **Purpose / Role in App:**  
 _What user action or feature does it power?_
 
-**Your Answer:**
+**Your Answer:**  
+Stores all recipes loaded from the JSON file and supports listing, searching, and iteration when checking cookable recipes.
 
 **Why it fits:**  
 _Explain access patterns, typical size, performance/Big-O, memory, simplicity._
@@ -65,17 +69,25 @@ _List alternatives (e.g., List<T>, SortedDictionary, custom tree) and why you di
 **Chosen Data Structure:**  
 _Name the data structure._
 
-**Your Answer:**
+**Your Answer:**  
+HashSet<string>
 
 **Purpose / Role in App:**  
 _What user action or feature does it power?_
 
-**Your Answer:**
+**Your Answer:**  
+Used to store:
+- All unique ingredients loaded from JSON
+- Current campfire ingredients
 
 **Why it fits:**  
 _Explain access patterns, typical size, performance/Big-O, memory, simplicity._
 
-**Your Answer:**
+**Your Answer:**  
+- Guarantees uniqueness (no duplicate ingredients)
+- Fast lookup and insertion: O(1) average
+- Case-insensitive comparer prevents duplicate entries caused by casing
+- Ideal for membership checks (Contains) during cooking logic
 
 **Alternatives considered:**  
 _List alternatives and why you didn't choose them._
@@ -89,23 +101,30 @@ _List alternatives and why you didn't choose them._
 **Chosen Data Structure:**  
 _Name the data structure._
 
-**Your Answer:**
+**Your Answer:**  
+Dictionary<string, bool>
 
 **Purpose / Role in App:**  
 _What user action or feature does it power?_
 
-**Your Answer:**
+**Your Answer:**  
+Stores the user’s recipe book, mapping recipe names to a cooked/not cooked status.
 
 **Why it fits:**  
 _Explain access patterns, typical size, performance/Big-O, memory, simplicity._
 
-**Your Answer:**
+**Your Answer:**  
+- Fast access by recipe name: O(1) average
+- Enforces uniqueness of saved recipes
+- Boolean value efficiently represents cooked status
+- Case-insensitive keys prevent duplicate saved recipes
 
 **Alternatives considered:**  
 _List alternatives and why you didn't choose them._
 
 **Your Answer:**
-
+List<Recipe>: would require linear searches and duplicate checks
+Custom object structure: unnecessary complexity for current scope
 ---
 
 ### Additional Structures (if applicable)
@@ -172,9 +191,15 @@ _Explain major design choices and why you made them._
 **Tradeoffs made:**  
 _Describe any tradeoffs between simplicity vs performance, memory vs speed, etc._
 
-**Your Answer:**
+**Your Answer:**  
+- Using List<Recipe> means searches are linear, but simplifies iteration and LINQ usage
+- Recipe book stores only name + cooked state rather than full recipe objects
+- Cooking logic favors simplicity over exact in-game accuracy
 
 **What you would do differently with more time:**  
 _Reflect on what you might change or improve._
 
-**Your Answer:**
+**Your Answer:**  
+- Separate data layer and UI logic more cleanly
+- Improve recipe matching logic for more precise results
+- Expand recipe metadata (hearts restored, effects, rarity)
